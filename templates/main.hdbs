@@ -1,0 +1,5 @@
+<select>
+    {{#each user_views}}
+    <option value="{{id}}">{{title}}</option>
+    {{/each}}
+</select>
