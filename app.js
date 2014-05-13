@@ -1,6 +1,7 @@
 (function() {
 
   return {
+    defaultState: 'loading',
     events: {
       'pane.activated': 'getCustomerLists',
       'click .save':'saveClicked'
