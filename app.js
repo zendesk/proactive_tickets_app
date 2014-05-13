@@ -111,6 +111,7 @@
         return {
           url: '/api/v2/tickets.json',
           type: 'POST',
+          contentType: 'application/json',
           data: {
             ticket: data
           }
