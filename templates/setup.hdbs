@@ -1,1 +1,33 @@
 <h1>Set up</h1>
+
+<div class="property_box">
+  <div class="form_field">
+    <label for="name">
+      Campaign name
+    </label>
+    <input value="{{campaignName}}" type="text" name="name" class="campaign-name" />
+  </div>
+  <div class="form_field">
+    <label for="subject">
+      Subject
+    </label>
+    <input value="" type="text" name="subject" class="subject"/>
+  </div>
+  <div class="form_field">
+    <label for="tags">
+      Tags
+    </label>
+    <input value="" type="text" name="tags" class="tags"/>
+  </div>
+  <div class="form_field">
+    <label for="description">
+      Description
+    </label>
+    <textarea name="description">
+      
+    </textarea>
+  </div>
+  <div class="form_field">
+    <button class="save">Save</button>
+  </div>
+</div>
