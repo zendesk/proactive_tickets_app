@@ -92,6 +92,22 @@
     "groupassignee": {
       "value": "Group and Assignee",
       "title": "Group and Assignee label"
+    },
+    "statusnew": {
+      "value": "New",
+      "title": "New"
+    },
+    "defaultsubject": {
+      "value": "Ticket created on your behalf",
+      "title": "Default subject text"
+    },
+    "defaultdescription1": {
+      "value": "Hi there,",
+      "title": "Default description text part 1"
+    },
+    "defaultdescription2": {
+      "value": "This ticket was created on your behalf.",
+      "title": "Default description text part 2"
     }
   }
 }
