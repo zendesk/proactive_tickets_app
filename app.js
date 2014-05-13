@@ -11,7 +11,7 @@
     },
 
     requests: {
-      customerLists: function(){
+      customerLists: function() {
         return{
           url: '/api/v2/user_views.json',
           type: 'GET',
@@ -19,7 +19,7 @@
         };
       },
 
-      listTicketFields: function(){
+      listTicketFields: function() {
         return{
           url: '/api/v2/ticket_fields.json',
           type: 'GET',
@@ -27,12 +27,13 @@
         };
       },
 
-      groupMemberships: function(){
+      groupMemberships: function() {
         return{
           url: '/api/v2/group_memberships/assignable.json?include=users,groups',
           type: 'GET',
           dataType: 'json'
         };
+      },
 
       createTicket: function(data) {
         return {
