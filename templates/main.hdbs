@@ -1,6 +1,11 @@
-<h1>Set up</h1>
-
 <div class="property_box">
+  <div class="form_field">
+    <select>
+      {{#each user_views}}
+        <option value="{{id}}">{{title}}</option>
+      {{/each}}
+    </select>
+  </div>
   <div class="form_field">
     <label for="name">
       Campaign name
