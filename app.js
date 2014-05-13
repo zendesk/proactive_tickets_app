@@ -2,10 +2,10 @@
 
   return {
     events: {
-      'app.activated':'doSomething'
+      'app.activated':'init'
     },
 
-    doSomething: function() {
+    init: function() {
     }
   };
 
