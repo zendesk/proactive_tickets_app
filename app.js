@@ -142,6 +142,8 @@
       var priorityOptions;
       var typeOptions;
       var statusOptions;
+      var priorityActive;
+      var typeActive;
 
       this.ajax('customerLists').then(function(customerListData){
         this.ajax('listTicketFields').then(function(fieldsData){
@@ -151,9 +153,11 @@
             for(var i=0; i<fieldsData.ticket_fields.length; i++){
               if(fieldsData.ticket_fields[i].type == 'priority'){
                 priorityOptions = fieldsData.ticket_fields[i].system_field_options;
+                priorityActive = fieldsData.ticket_fields[i].active;
               }
               else if(fieldsData.ticket_fields[i].type == "tickettype"){
                 typeOptions = fieldsData.ticket_fields[i].system_field_options;
+                typeActive = fieldsData.ticket_fields[i].active;
               }
               else if(fieldsData.ticket_fields[i].type == "status"){
                 statusOptions = fieldsData.ticket_fields[i].system_field_options;
@@ -170,7 +174,7 @@
 
             })
 
-            self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships});
+            self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive});
             self.disableSaveButton(true);
 
 
@@ -255,7 +259,6 @@
     },
 
     generateView: function(){
-      debugger
       var campaignTag = this.data.campaignTag;
       var campaignName = this.data.campaignName;
 

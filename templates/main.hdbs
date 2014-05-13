@@ -40,6 +40,7 @@
     </label>
     <input value="" type="text" name="tags" class="tags"/>
   </div>
+  {{#if hasPriority}}
   <div class="form_field">
     <label for="priority">
       {{t "form.priority"}}
@@ -51,6 +52,8 @@
       {{/each}}
     </select>
   </div>
+  {{/if}}
+  {{#if hasType}}
   <div class="form_field">
     <label for="type">
       {{t "form.tickettype"}}
@@ -62,6 +65,7 @@
       {{/each}}
     </select>
   </div>
+  {{/if}}
     <div class="form_field">
     <label for="status">
       {{t "form.status"}}
