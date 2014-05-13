@@ -29,15 +29,19 @@
     getData: function(){
     var self = this;
     var priorityOptions;
+    var typeOptions;
      this.ajax('customerLists').then(function(customerListData){
         this.ajax('listTicketFields').then(function(fieldsData){
           for(var i=0; i<fieldsData.ticket_fields.length; i++){
             if(fieldsData.ticket_fields[i].type == 'priority'){
               priorityOptions = fieldsData.ticket_fields[i].system_field_options;
             }
+            else if(fieldsData.ticket_fields[i].type == "tickettype"){
+              typeOptions = fieldsData.ticket_fields[i].system_field_options;
+            }
           }
 
-          self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions});
+          self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions});
         })
       })
     },

@@ -36,6 +36,16 @@
     </select>
   </div>
   <div class="form_field">
+    <label for="type">
+      Type
+    </label>
+    <select>
+      {{#each types}}
+        <option value="{{value}}">{{name}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="form_field">
     <label for="description">
       {{t "form.description"}}
     </label>
