@@ -2,12 +2,14 @@
 
   return {
     defaultState: 'loading',
-    recipients: {},
+    recipients: [],
     createdTickets: 0,
     submittedTickets: null,
     requiredFields: [
       'subject', 'description', 'campaign-name', 'customer-list'
     ],
+
+    fields: {},
 
     currentView: 0,
 
@@ -21,16 +23,24 @@
     },
 
     goToTemplate: function() {
-      this.switchTo('loading');
+      var listid = this.getField('customer-list'),
+          self = this;
       switch (this.currentView) {
         case 0:
+          this.switchTo('loading');
           this.switchTo('onboarding');
           break;
         case 1:
+          this.switchTo('loading');
           this.getData();
           break;
         case 2:
-          this.switchTo('confirmation');
+          this.setTicketData();
+          this.switchTo('loading');
+          this.getRecipients(listid).then(function(data) {
+            self.recipients = data.rows;
+            self.switchTo('confirmation', { recipientCount: self.recipients.length });
+          });
           break;
 
       }
@@ -101,7 +111,9 @@
         return {
           url: '/api/v2/tickets.json',
           type: 'POST',
-          data: data
+          data: {
+            ticket: data
+          }
         }
       },
 
@@ -166,12 +178,7 @@
       return campaignName.replace(/[^\w\s]/gi, '').replace(/\s/g, '_').replace(/ /g, '').toLowerCase();
     },
 
-    saveClicked: function() {
-
-      /* Fetch recipients for selecte customer list */
-      var listid = this.getField('customer-list');
-      this.getRecipients(listid);
-
+    setTicketData: function() {
       var subject = this.getField('subject'),
           tags = this.getTagsArray(),
           status = this.getField('status'),
@@ -179,23 +186,26 @@
           priority = this.getField('priority'),
           description = this.getField('description');
 
-      for(var number=0; number < 5; number++) {
-        var data = {
-          ticket: {
-            subject: subject + " " + number,
-            comment: {
-              body: description
-            },
-            tags: tags,
-            status: status,
-            type: type,
-            priority: priority,
-          }
-        };
+      this.ticketData = {
+          subject: subject,
+          comment: {
+            body: description
+          },
+          tags: tags,
+          status: status,
+          type: type,
+          priority: priority,
+      };
+    },
 
+    saveClicked: function() {
+      var data;
+      this.recipients.forEach(function(recipient) {
+        data = this.ticketData;
+        data.requester_id = recipient.id;
         this.submittedTickets += 1;
         this.ajax('createTicket', data);
-      }
+      }.bind(this));
     },
 
     updateProgressStatus: function() {
@@ -229,11 +239,7 @@
     },
 
     getRecipients: function(listid){
-      var self = this;
-
-      this.ajax('customerListMemberships', listid).then(function(users){
-        recipients = users.rows;
-      })
+      return this.ajax('customerListMemberships', listid);
     }
 
   };

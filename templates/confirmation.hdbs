@@ -1,1 +1,6 @@
 Confirmation
+
+<div class="well">
+  You are about to send to <strong>{{recipientCount}} recipient(s).</strong>
+  <button class="save">Send</button>
+</div>
