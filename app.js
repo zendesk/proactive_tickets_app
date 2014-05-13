@@ -115,7 +115,7 @@
           data: {
             ticket: data
           }
-        }
+        };
       },
 
       customerListMemberships: function(id){
@@ -133,7 +133,7 @@
           contentType: 'application/json',
           data: JSON.stringify(data),
           proxy_v2: true
-        }
+        };
       }
     },
 
@@ -170,17 +170,17 @@
                 id: group.id,
                 group: self.getSideLoadedData(group.id, groupData.groups).name,
                 users: self.findUsersForGroup(group.id, groupData)
-              }
+              };
 
-            })
+            });
 
             self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive});
             self.disableSaveButton(true);
 
 
-          })
-        })
-      })
+          });
+        });
+      });
     },
 
     getTagsArray: function() {
@@ -244,18 +244,18 @@
     getSideLoadedData: function(id, json){
       return _.find(json, function(obj){
         return obj.id === id;
-      })
+      });
     },
 
     findUsersForGroup: function(id, json){
       var self = this;
       var memberships = _.filter(json.group_memberships, function(membership){
         return membership.group_id === id;
-      })
+      });
 
       return _.map(memberships, function(membership){
         return self.getSideLoadedData(membership.user_id, json.users);
-      })
+      });
     },
 
     generateView: function(){
