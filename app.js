@@ -10,11 +10,6 @@
     ],
 
     currentView: 0,
-    views: [
-      'onboarding',
-      'main',
-      'confirmation'
-    ],
 
     events: {
       'pane.activated': 'goToTemplate',
@@ -26,10 +21,19 @@
     },
 
     goToTemplate: function() {
-      this.switchTo(this.views[this.currentView], {
-        showPreviousButton: true,
-        showNextButton: true
-      });
+      this.switchTo('loading');
+      switch (this.currentView) {
+        case 0:
+          this.switchTo('onboarding');
+          break;
+        case 1:
+          this.getData();
+          break;
+        case 2:
+          this.switchTo('confirmation');
+          break;
+
+      }
     },
 
     goToPrevious: function() {
@@ -39,7 +43,7 @@
     },
 
     showNextButton: function() {
-      return this.currentView < this.views.length;
+      return this.currentView < 3;
     },
 
     showPreviousButton: function() {
@@ -47,7 +51,7 @@
     },
 
     goToNext: function() {
-      if (this.currentView === this.views.length-1) { return; }
+      if (this.currentView === 2) { return; }
       this.currentView += 1;
       this.goToTemplate();
     },
