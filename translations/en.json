@@ -58,6 +58,10 @@
     "subject": "Subject",
     "tags": "Tags",
     "description": "Description",
-    "save": "Save"
+    "save": "Save",
+    "priority": "Priority",
+    "tickettype": "Type",
+    "status": "Status",
+    "groupassignee": "Group and Assignee"
   }
 }

@@ -20,6 +20,19 @@
     <input value="" type="text" name="subject" class="subject"/>
   </div>
   <div class="form_field">
+    <label for="groupAssignee">
+      {{t "form.groupassignee"}}
+    </label>
+    <select>
+      {{#each groupAssignees.groups}}
+        <optgroup label={{name}}
+          <option value="{{id}}">{{name}}</option>
+          <option value="2">"another assignee"</option>
+        </optgroup>
+      {{/each}}
+    </select>
+  </div>
+  <div class="form_field">
     <label for="tags">
       {{t "form.tags"}}
     </label>
@@ -27,7 +40,7 @@
   </div>
   <div class="form_field">
     <label for="priority">
-      Priority
+      {{t "form.priority"}}
     </label>
     <select>
       {{#each priorities}}
@@ -37,10 +50,20 @@
   </div>
   <div class="form_field">
     <label for="type">
-      Type
+      {{t "form.tickettype"}}
     </label>
     <select>
       {{#each types}}
+        <option value="{{value}}">{{name}}</option>
+      {{/each}}
+    </select>
+  </div>
+    <div class="form_field">
+    <label for="status">
+      {{t "form.status"}}
+    </label>
+    <select>
+      {{#each statuses}}
         <option value="{{value}}">{{name}}</option>
       {{/each}}
     </select>

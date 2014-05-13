@@ -22,6 +22,14 @@
           type: 'GET',
           dataType: 'json'
         };
+      },
+
+      groupMemberships: function(){
+        return{
+          url: '/api/v2/group_memberships/assignable.json?include=users,groups',
+          type: 'GET',
+          dataType: 'json'
+        };
       }
 
     },
@@ -30,18 +38,28 @@
     var self = this;
     var priorityOptions;
     var typeOptions;
+    var statusOptions;
      this.ajax('customerLists').then(function(customerListData){
         this.ajax('listTicketFields').then(function(fieldsData){
-          for(var i=0; i<fieldsData.ticket_fields.length; i++){
-            if(fieldsData.ticket_fields[i].type == 'priority'){
-              priorityOptions = fieldsData.ticket_fields[i].system_field_options;
+          this.ajax('groupMemberships').then(function(groupData){
+          
+            // Fetch option lists for priority, type, and status
+            for(var i=0; i<fieldsData.ticket_fields.length; i++){
+              if(fieldsData.ticket_fields[i].type == 'priority'){
+                priorityOptions = fieldsData.ticket_fields[i].system_field_options;
+              }
+              else if(fieldsData.ticket_fields[i].type == "tickettype"){
+                typeOptions = fieldsData.ticket_fields[i].system_field_options;
+              }
+              else if(fieldsData.ticket_fields[i].type == "status"){
+                statusOptions = fieldsData.ticket_fields[i].system_field_options;
+              }
             }
-            else if(fieldsData.ticket_fields[i].type == "tickettype"){
-              typeOptions = fieldsData.ticket_fields[i].system_field_options;
-            }
-          }
 
-          self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions});
+            // Send all data into the main template
+            self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:groupData});
+
+          })
         })
       })
     },
