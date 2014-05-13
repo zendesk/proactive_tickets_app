@@ -110,6 +110,9 @@
 
       var subject = this.getField('subject'),
           tags = this.getTagsArray(),
+          status = this.getField('status'),
+          type = this.getField('type'),
+          priority = this.getField('priority'),
           description = this.getField('description');
 
       for(var number=0; number < 5; number++) {
@@ -119,7 +122,10 @@
             comment: {
               body: description
             },
-            tags: tags
+            tags: tags,
+            status: status,
+            type: type,
+            priority: priority,
           }
         };
 
