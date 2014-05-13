@@ -28,15 +28,19 @@
     },
 
     saveClicked: function() {
-      console.log(this.getField('campaign-name'));
-      console.log(this.getField('subkect'));
-      console.log(this.getField('tags'));
-      console.log(this.getField('description'));
+      this.getField('campaign-name');
+      this.getField('subject');
+      this.getField('tags');
+      this.getField('description');
     },
 
     getField: function(name) {
-      var cssSelector = '.' + name;
-      return this.$(cssSelector).val();
+      var cssSelector = '.' + name,
+          value = this.$(cssSelector).val();
+
+      console.log(name + ': ' + value);
+
+      return value;
     }
   };
 
