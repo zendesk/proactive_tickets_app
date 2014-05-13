@@ -4,7 +4,6 @@
 </header>
 <section data-main/>
 <footer>
-  <a href="mailto:{{author.email}}">
-    {{author.name}}
-  </a>
+  <button class="btn previous">{{t "form.previous"}}</button>
+  <button class="btn btn-inverse next">{{t "form.next"}}</button>
 </footer>

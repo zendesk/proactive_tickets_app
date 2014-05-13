@@ -73,6 +73,14 @@
       "value": "Description",
       "title": "Description label"
     },
+    "previous": {
+      "value": "Previous",
+      "title": "Previous button text"
+    },
+    "next": {
+      "value": "Next",
+      "title": "Next button text"
+    },
     "save": {
       "value": "Save",
       "title": "Save button text"

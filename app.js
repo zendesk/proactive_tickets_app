@@ -8,11 +8,48 @@
     requiredFields: [
       'subject', 'description', 'campaign-name', 'customer-list'
     ],
+
+    currentView: 0,
+    views: [
+      'onboarding',
+      'main',
+      'confirmation'
+    ],
+
     events: {
-      'pane.activated': 'getData',
+      'pane.activated': 'goToTemplate',
       'click .save':'saveClicked',
       'createTicket.done': 'updateProgressStatus',
-      'change,keyup,input': 'valueChanged'
+      'change,keyup,input': 'valueChanged',
+      'click .previous': 'goToPrevious',
+      'click .next': 'goToNext'
+    },
+
+    goToTemplate: function() {
+      this.switchTo(this.views[this.currentView], {
+        showPreviousButton: true,
+        showNextButton: true
+      });
+    },
+
+    goToPrevious: function() {
+      if (this.currentView === 0) { return; }
+      this.currentView -= 1;
+      this.goToTemplate();
+    },
+
+    showNextButton: function() {
+      return this.currentView < this.views.length;
+    },
+
+    showPreviousButton: function() {
+      return this.currentView > 0;
+    },
+
+    goToNext: function() {
+      if (this.currentView === this.views.length-1) { return; }
+      this.currentView += 1;
+      this.goToTemplate();
     },
 
     isFormValid: function() {
