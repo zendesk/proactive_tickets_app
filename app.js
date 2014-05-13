@@ -70,6 +70,16 @@
           type: 'GET',
           dataType: 'json'
         };
+      },
+
+      createView: function(data) {
+        return{
+          url: '/api/v2/views.json',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify(data),
+          proxy_v2: true
+        }
       }
     },
 
@@ -126,10 +136,12 @@
     },
 
     saveClicked: function() {
-
       /* Fetch recipients for selecte customer list */
       var listid = this.getField('customer-list');
       this.getRecipients(listid);
+
+      /* Create a view for the campaign */
+      this.generateView();
 
       var subject = this.getField('subject'),
           tags = this.getTagsArray(),
@@ -193,6 +205,43 @@
       this.ajax('customerListMemberships', listid).then(function(users){
         recipients = users.rows;
       })
+    },
+
+    generateView: function(){
+      var campaignTag = this.getCampaignNameTag();
+      var campaignName = this.getField('campaign-name');
+
+      var data = 
+      {
+        view: {
+          title: "Campaign: " + campaignName,
+          conditions: {
+            all: [
+              {
+                field: "status",
+                operator: "less_than",
+                value: "solved"
+              },
+              {
+                field: "current_tags",
+                operator: "includes",
+                value: campaignTag
+              }
+            ],
+            any: []
+          },
+          output: {
+            columns: ["id", "status", "subject", "requester", "assignee"]
+          },
+          restriction: { 
+            type: "User", 
+            id: this.currentUser().id() 
+          }
+        }
+      };
+
+      var request = this.ajax('createView', data);
+
     }
 
   };
