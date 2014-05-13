@@ -66,8 +66,17 @@
               }
             }
 
-            // Send all data into the main template
-            self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:groupData});
+            var memberships = _.map(groupData.groups, function(group){
+
+              return{
+                id: group.id,
+                group: self.getSideLoadedData(group.id, groupData.groups).name,
+                users: self.findUsersForGroup(group.id, groupData)
+              }
+
+            })
+
+            self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships});
 
           })
         })
@@ -116,6 +125,23 @@
           value = this.$(cssSelector).val();
 
       return value;
+    },
+
+    getSideLoadedData: function(id, json){
+      return _.find(json, function(obj){
+        return obj.id === id;
+      })
+    },
+
+    findUsersForGroup: function(id, json){
+      var self = this;
+      var memberships = _.filter(json.group_memberships, function(membership){
+        return membership.group_id === id;
+      })
+
+      return _.map(memberships, function(membership){
+        return self.getSideLoadedData(membership.user_id, json.users);
+      })
     }
 
   };
