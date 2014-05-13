@@ -26,6 +26,16 @@
     <input value="" type="text" name="tags" class="tags"/>
   </div>
   <div class="form_field">
+    <label for="priority">
+      Priority
+    </label>
+    <select>
+      {{#each priorities}}
+        <option value="{{value}}">{{name}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="form_field">
     <label for="description">
       {{t "form.description"}}
     </label>

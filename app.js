@@ -3,7 +3,7 @@
   return {
     defaultState: 'loading',
     events: {
-      'pane.activated': 'getCustomerLists',
+      'pane.activated': 'getData',
       'click .save':'saveClicked'
     },
 
@@ -14,17 +14,32 @@
           type: 'GET',
           dataType: 'json'
         };
+      },
+
+      listTicketFields: function(){
+        return{
+          url: '/api/v2/ticket_fields.json',
+          type: 'GET',
+          dataType: 'json'
+        };
       }
+
     },
 
-    getCustomerLists: function(){
-      var request = this.ajax('customerLists');
-      request.done(this.displayForm);
-      //request.fail(this.showError);
-    },
+    getData: function(){
+    var self = this;
+    var priorityOptions;
+     this.ajax('customerLists').then(function(customerListData){
+        this.ajax('listTicketFields').then(function(fieldsData){
+          for(var i=0; i<fieldsData.ticket_fields.length; i++){
+            if(fieldsData.ticket_fields[i].type == 'priority'){
+              priorityOptions = fieldsData.ticket_fields[i].system_field_options;
+            }
+          }
 
-    displayForm: function(data){
-      this.switchTo('main', data);
+          self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions});
+        })
+      })
     },
 
     saveClicked: function() {
@@ -42,6 +57,7 @@
 
       return value;
     }
+
   };
 
 }());
