@@ -1,6 +1,7 @@
 <div class="property_box">
   <div class="form_field">
-    <select>
+    <label for="customer-list">Customer List</label>
+    <select name="customer-list" class="customer-list">
       {{#each user_views}}
         <option value="{{id}}">{{title}}</option>
       {{/each}}
