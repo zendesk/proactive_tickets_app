@@ -30,6 +30,7 @@
         case 0:
           this.switchTo('loading');
           this.switchTo('onboarding');
+          this.disableNextButton(false);
           break;
         case 1:
           this.switchTo('loading');
@@ -42,8 +43,8 @@
             self.recipients = data.rows;
             self.switchTo('confirmation', { recipientCount: self.recipients.length });
           });
+          this.disableNextButton(false);
           break;
-
       }
     },
 
@@ -76,11 +77,11 @@
     },
 
     valueChanged: _.debounce(function(e) {
-      this.disableSaveButton(!this.isFormValid());
+      this.disableNextButton(!this.isFormValid());
     }, 400),
 
-    disableSaveButton: function(disabled) {
-      this.$('.save').attr('disabled', disabled);
+    disableNextButton: function(disabled) {
+      this.$('.next').attr('disabled', disabled);
     },
 
     requests: {
@@ -262,7 +263,7 @@
       var campaignTag = this.data.campaignTag;
       var campaignName = this.data.campaignName;
 
-      var data = 
+      var data =
       {
         view: {
           title: "Campaign: " + campaignName,
@@ -284,9 +285,9 @@
           output: {
             columns: ["id", "status", "subject", "requester", "assignee"]
           },
-          restriction: { 
-            type: "User", 
-            id: this.currentUser().id() 
+          restriction: {
+            type: "User",
+            id: this.currentUser().id()
           }
         }
       };
