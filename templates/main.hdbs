@@ -44,7 +44,7 @@
     <label for="priority">
       {{t "form.priority"}}
     </label>
-    <select>
+    <select class="priority" name="priority">
       {{#each priorities}}
         <option value="{{value}}">{{name}}</option>
       {{/each}}
@@ -54,7 +54,7 @@
     <label for="type">
       {{t "form.tickettype"}}
     </label>
-    <select>
+    <select class="type" name="type">
       {{#each types}}
         <option value="{{value}}">{{name}}</option>
       {{/each}}
@@ -64,7 +64,7 @@
     <label for="status">
       {{t "form.status"}}
     </label>
-    <select>
+    <select class="status" name="status">
       {{#each statuses}}
         <option value="{{value}}">{{name}}</option>
       {{/each}}
