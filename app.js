@@ -5,10 +5,30 @@
     recipients: {},
     createdTickets: 0,
     submittedTickets: null,
+    requiredFields: [
+      'subject', 'description'
+    ],
     events: {
       'pane.activated': 'getData',
       'click .save':'saveClicked',
-      'createTicket.done': 'updateProgressStatus'
+      'createTicket.done': 'updateProgressStatus',
+      'change,keyup,input': 'valueChanged'
+    },
+
+    isFormValid: function() {
+      var fields = _.filter(this.requiredFields, function(fieldName) {
+        return this.getField(fieldName) === '';
+      }.bind(this));
+
+      return fields.length === 0;
+    },
+
+    valueChanged: _.debounce(function(e) {
+      this.disableSaveButton(!this.isFormValid());
+    }, 400),
+
+    disableSaveButton: function(disabled) {
+      this.$('.save').attr('disabled', disabled);
     },
 
     requests: {
@@ -54,11 +74,12 @@
     },
 
     getData: function(){
-    var self = this;
-    var priorityOptions;
-    var typeOptions;
-    var statusOptions;
-     this.ajax('customerLists').then(function(customerListData){
+      var self = this;
+      var priorityOptions;
+      var typeOptions;
+      var statusOptions;
+
+      this.ajax('customerLists').then(function(customerListData){
         this.ajax('listTicketFields').then(function(fieldsData){
           this.ajax('groupMemberships').then(function(groupData){
 
@@ -86,6 +107,8 @@
             })
 
             self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships});
+            self.disableSaveButton(true);
+
 
           })
         })

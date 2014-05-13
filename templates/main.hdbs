@@ -15,7 +15,7 @@
   </div>
   <div class="form_field">
     <label for="subject">
-      {{t "form.subject"}}
+      {{t "form.subject"}}*
     </label>
     <input value="" type="text" name="subject" class="subject"/>
   </div>
@@ -72,12 +72,12 @@
   </div>
   <div class="form_field">
     <label for="description">
-      {{t "form.description"}}
+      {{t "form.description"}}*
     </label>
     <textarea name="description" class="description"></textarea>
   </div>
   <div class="form_field">
-    <button class="save">{{t "form.save"}}</button>
+    <button class="btn btn-inverse save">{{t "form.save"}}</button>
   </div>
 </div>
 
