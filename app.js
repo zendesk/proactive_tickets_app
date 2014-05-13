@@ -6,6 +6,7 @@
     },
 
     init: function() {
+      this.switchTo('setup');
     }
   };
 
