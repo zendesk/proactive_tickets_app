@@ -2,6 +2,7 @@
 
   return {
     defaultState: 'loading',
+    recipients: {},
     createdTickets: 0,
     submittedTickets: null,
     events: {
@@ -41,6 +42,14 @@
           type: 'POST',
           data: data
         }
+      },
+
+      customerListMemberships: function(id){
+        return{
+          url: '/api/v2/user_views/' + id + '/execute.json',
+          type: 'GET',
+          dataType: 'json'
+        };
       }
     },
 
@@ -94,11 +103,16 @@
     },
 
     saveClicked: function() {
+      
+      /* Fetch recipients for selecte customer list */
+      var listid = this.getField('customer-list');
+      this.getRecipients(listid);
+
       var subject = this.getField('subject'),
           tags = this.getTagsArray(),
           description = this.getField('description');
 
-      for(var number=0; number < 50; number++) {
+      for(var number=0; number < 5; number++) {
         var data = {
           ticket: {
             subject: subject + " " + number,
@@ -141,6 +155,14 @@
 
       return _.map(memberships, function(membership){
         return self.getSideLoadedData(membership.user_id, json.users);
+      })
+    },
+
+    getRecipients: function(listid){
+      var self = this;
+      
+      this.ajax('customerListMemberships', listid).then(function(users){
+        recipients = users.rows;
       })
     }
 
