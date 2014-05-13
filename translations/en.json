@@ -50,5 +50,14 @@
   "groups": {
     "value": "Groups",
     "title": "user groups"
+  },
+
+  "form": {
+    "customer_list": "Customer List",
+    "campaign_name": "Campaign Name",
+    "subject": "Subject",
+    "tags": "Tags",
+    "description": "Description",
+    "save": "Save"
   }
 }

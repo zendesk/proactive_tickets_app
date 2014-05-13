@@ -1,6 +1,6 @@
 <div class="property_box">
   <div class="form_field">
-    <label for="customer-list">Customer List</label>
+    <label for="customer-list">{{t "form.customer_list"}}</label>
     <select name="customer-list" class="customer-list">
       {{#each user_views}}
         <option value="{{id}}">{{title}}</option>
@@ -9,31 +9,29 @@
   </div>
   <div class="form_field">
     <label for="name">
-      Campaign name
+      {{t "form.campaign_name"}}
     </label>
     <input value="{{campaignName}}" type="text" name="name" class="campaign-name" />
   </div>
   <div class="form_field">
     <label for="subject">
-      Subject
+      {{t "form.subject"}}
     </label>
     <input value="" type="text" name="subject" class="subject"/>
   </div>
   <div class="form_field">
     <label for="tags">
-      Tags
+      {{t "form.tags"}}
     </label>
     <input value="" type="text" name="tags" class="tags"/>
   </div>
   <div class="form_field">
     <label for="description">
-      Description
+      {{t "form.description"}}
     </label>
-    <textarea name="description">
-      
-    </textarea>
+    <textarea name="description" class="description"></textarea>
   </div>
   <div class="form_field">
-    <button class="save">Save</button>
+    <button class="save">{{t "form.save"}}</button>
   </div>
 </div>
