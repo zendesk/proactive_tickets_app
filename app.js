@@ -33,8 +33,14 @@
           type: 'GET',
           dataType: 'json'
         };
-      }
 
+      createTicket: function(data) {
+        return {
+          url: '/api/v2/tickets.json',
+          type: 'POST',
+          data: data
+        }
+      }
     },
 
     getData: function(){

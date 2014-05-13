@@ -6,7 +6,7 @@
       "title": "app description"
     },
     "name": {
-      "value": "Buddha Machine",
+      "value": "Proactive Ticket App",
       "title": "app name"
     }
   },
@@ -53,15 +53,45 @@
   },
 
   "form": {
-    "customer_list": "Customer List",
-    "campaign_name": "Campaign Name",
-    "subject": "Subject",
-    "tags": "Tags",
-    "description": "Description",
-    "save": "Save",
-    "priority": "Priority",
-    "tickettype": "Type",
-    "status": "Status",
-    "groupassignee": "Group and Assignee"
+    "customer_list": {
+      "value": "Customer List",
+      "title": "Customer list label"
+    },
+    "campaign_name": {
+      "value": "Campaign Name",
+      "title": "Campaign name label"
+    },
+    "subject": {
+      "value": "Subject",
+      "title": "Subject label"
+    },
+    "tags": {
+      "value": "Tags",
+      "title": "Tags label"
+    },
+    "description": {
+      "value": "Description",
+      "title": "Description label"
+    },
+    "save": {
+      "value": "Save",
+      "title": "Save button text"
+    },
+    "priority": {
+      "value": "Priority",
+      "title": "Priority label"
+    },
+    "tickettype": {
+      "value": "Type",
+      "title": "Type label"
+    },
+    "status": {
+      "value": "Status",
+      "title": "Status label"
+    },
+    "groupassignee": {
+      "value": "Group and Assignee",
+      "title": "Group and Assignee label"
+    }
   }
 }
