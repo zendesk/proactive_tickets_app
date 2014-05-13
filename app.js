@@ -6,7 +6,7 @@
     createdTickets: 0,
     submittedTickets: null,
     requiredFields: [
-      'subject', 'description'
+      'subject', 'description', 'campaign-name', 'customer-list'
     ],
     events: {
       'pane.activated': 'getData',
@@ -126,7 +126,7 @@
     },
 
     saveClicked: function() {
-      
+
       /* Fetch recipients for selecte customer list */
       var listid = this.getField('customer-list');
       this.getRecipients(listid);
@@ -189,7 +189,7 @@
 
     getRecipients: function(listid){
       var self = this;
-      
+
       this.ajax('customerListMemberships', listid).then(function(users){
         recipients = users.rows;
       })

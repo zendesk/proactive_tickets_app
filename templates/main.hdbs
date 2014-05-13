@@ -1,6 +1,6 @@
 <div class="property_box">
   <div class="form_field">
-    <label for="customer-list">{{t "form.customer_list"}}</label>
+    <label for="customer-list">{{t "form.customer_list"}}*</label>
     <select name="customer-list" class="customer-list">
       {{#each user_views}}
         <option value="{{id}}">{{title}}</option>
@@ -9,7 +9,7 @@
   </div>
   <div class="form_field">
     <label for="name">
-      {{t "form.campaign_name"}}
+      {{t "form.campaign_name"}}*
     </label>
     <input value="{{campaignName}}" type="text" name="name" class="campaign-name" />
   </div>
