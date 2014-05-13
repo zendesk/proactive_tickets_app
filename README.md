@@ -1,12 +1,11 @@
-# App name
+# Proactive Ticket
 
 [brief description of the app]
 
-### The following information is displayed:
+#### Contributors
 
-* info1
-* info2
-* info3
+* Jesper Christiansen
+
 
 Please submit bug reports to [Insert Link](). Pull requests are welcome.
 
