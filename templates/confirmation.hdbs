@@ -2,5 +2,8 @@ Confirmation
 
 <div class="well">
   You are about to send to <strong>{{recipientCount}} recipient(s).</strong>
-  <button class="save">Send</button>
+</div>
+<div class="buttonfooter">
+  <button class="btn previous">{{t "form.previous"}}</button>
+  <button class="btn btn-inverse save">{{t "form.send"}}</button>
 </div>

@@ -85,6 +85,10 @@
       "value": "Save",
       "title": "Save button text"
     },
+    "send": {
+      "value": "Send",
+      "title": "Send button text"
+    },
     "priority": {
       "value": "Priority",
       "title": "Priority label"

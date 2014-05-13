@@ -1,1 +1,5 @@
 Onboarding
+
+<div class="buttonfooter">
+  <button class="btn btn-inverse next">{{t "form.next"}}</button>
+</div>

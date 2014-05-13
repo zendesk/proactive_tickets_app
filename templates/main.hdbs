@@ -87,3 +87,8 @@
 
 <div class="progress">
 </div>
+
+<div class="buttonfooter">
+  <button class="btn previous">{{t "form.previous"}}</button>
+  <button class="btn btn-inverse next">{{t "form.next"}}</button>
+</div>

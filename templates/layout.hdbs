@@ -4,6 +4,5 @@
 </header>
 <section data-main/>
 <footer>
-  <button class="btn previous">{{t "form.previous"}}</button>
-  <button class="btn btn-inverse next">{{t "form.next"}}</button>
+  Powered by Cocktails and Donuts
 </footer>
