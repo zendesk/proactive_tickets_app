@@ -2,17 +2,69 @@
 
   return {
     defaultState: 'loading',
-    recipients: {},
+    recipients: [],
     createdTickets: 0,
     submittedTickets: null,
     requiredFields: [
       'subject', 'description', 'campaign-name', 'customer-list'
     ],
+
+    fields: {},
+    data: {},
+
+    currentView: 0,
+
     events: {
-      'pane.activated': 'getData',
+      'pane.activated': 'goToTemplate',
       'click .save':'saveClicked',
       'createTicket.done': 'updateProgressStatus',
-      'change,keyup,input': 'valueChanged'
+      'change,keyup,input': 'valueChanged',
+      'click .previous': 'goToPrevious',
+      'click .next': 'goToNext'
+    },
+
+    goToTemplate: function() {
+      var listid = this.getField('customer-list'),
+          self = this;
+      switch (this.currentView) {
+        case 0:
+          this.switchTo('loading');
+          this.switchTo('onboarding');
+          break;
+        case 1:
+          this.switchTo('loading');
+          this.getData();
+          break;
+        case 2:
+          this.setData();
+          this.switchTo('loading');
+          this.getRecipients(listid).then(function(data) {
+            self.recipients = data.rows;
+            self.switchTo('confirmation', { recipientCount: self.recipients.length });
+          });
+          break;
+
+      }
+    },
+
+    goToPrevious: function() {
+      if (this.currentView === 0) { return; }
+      this.currentView -= 1;
+      this.goToTemplate();
+    },
+
+    showNextButton: function() {
+      return this.currentView < 3;
+    },
+
+    showPreviousButton: function() {
+      return this.currentView > 0;
+    },
+
+    goToNext: function() {
+      if (this.currentView === 2) { return; }
+      this.currentView += 1;
+      this.goToTemplate();
     },
 
     isFormValid: function() {
@@ -60,7 +112,9 @@
         return {
           url: '/api/v2/tickets.json',
           type: 'POST',
-          data: data
+          data: {
+            ticket: data
+          }
         }
       },
 
@@ -135,14 +189,7 @@
       return campaignName.replace(/[^\w\s]/gi, '').replace(/\s/g, '_').replace(/ /g, '').toLowerCase();
     },
 
-    saveClicked: function() {
-      /* Fetch recipients for selecte customer list */
-      var listid = this.getField('customer-list');
-      this.getRecipients(listid);
-
-      /* Create a view for the campaign */
-      this.generateView();
-
+    setData: function() {
       var subject = this.getField('subject'),
           tags = this.getTagsArray(),
           status = this.getField('status'),
@@ -150,23 +197,31 @@
           priority = this.getField('priority'),
           description = this.getField('description');
 
-      for(var number=0; number < 5; number++) {
-        var data = {
-          ticket: {
-            subject: subject + " " + number,
-            comment: {
-              body: description
-            },
-            tags: tags,
-            status: status,
-            type: type,
-            priority: priority,
-          }
-        };
+      this.data = {
+        campaignTag: this.getCampaignNameTag(),
+        campaignName: this.getField('campaign-name'),
+        ticketData: {
+          subject: subject,
+          comment: {
+            body: description
+          },
+          tags: tags,
+          status: status,
+          type: type,
+          priority: priority,
+        }
+      };
+    },
 
+    saveClicked: function() {
+      var data;
+      this.recipients.forEach(function(recipient) {
+        data = this.data.ticketData;
+        data.requester_id = recipient.id;
         this.submittedTickets += 1;
         this.ajax('createTicket', data);
-      }
+      }.bind(this));
+      this.generateView();
     },
 
     updateProgressStatus: function() {
@@ -199,17 +254,10 @@
       })
     },
 
-    getRecipients: function(listid){
-      var self = this;
-
-      this.ajax('customerListMemberships', listid).then(function(users){
-        recipients = users.rows;
-      })
-    },
-
     generateView: function(){
-      var campaignTag = this.getCampaignNameTag();
-      var campaignName = this.getField('campaign-name');
+      debugger
+      var campaignTag = this.data.campaignTag;
+      var campaignName = this.data.campaignName;
 
       var data = 
       {
@@ -241,7 +289,10 @@
       };
 
       var request = this.ajax('createView', data);
+    },
 
+    getRecipients: function(listid){
+      return this.ajax('customerListMemberships', listid);
     }
 
   };

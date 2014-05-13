@@ -79,9 +79,6 @@
     </label>
     <textarea name="description" class="description">{{t "form.defaultdescription1"}}&#13;&#10;&#13;{{t "form.defaultdescription2"}}</textarea>
   </div>
-  <div class="form_field">
-    <button class="btn btn-inverse save">{{t "form.save"}}</button>
-  </div>
 </div>
 
 <div class="progress">
