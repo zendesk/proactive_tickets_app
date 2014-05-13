@@ -2,9 +2,12 @@
 
   return {
     defaultState: 'loading',
+    createdTickets: 0,
+    submittedTickets: null,
     events: {
       'pane.activated': 'getData',
-      'click .save':'saveClicked'
+      'click .save':'saveClicked',
+      'createTicket.done': 'updateProgressStatus'
     },
 
     requests: {
@@ -42,7 +45,7 @@
      this.ajax('customerLists').then(function(customerListData){
         this.ajax('listTicketFields').then(function(fieldsData){
           this.ajax('groupMemberships').then(function(groupData){
-          
+
             // Fetch option lists for priority, type, and status
             for(var i=0; i<fieldsData.ticket_fields.length; i++){
               if(fieldsData.ticket_fields[i].type == 'priority'){
@@ -64,18 +67,46 @@
       })
     },
 
+    getTagsArray: function() {
+      var tags = this.getField('tags') + ' ' + this.getCampaignNameTag();
+      return tags.split(' ');
+    },
+
+    getCampaignNameTag: function() {
+      var campaignName = this.getField('campaign-name');
+      return campaignName.replace(/[^\w\s]/gi, '').replace(/\s/g, '_').replace(/ /g, '').toLowerCase();
+    },
+
     saveClicked: function() {
-      this.getField('campaign-name');
-      this.getField('subject');
-      this.getField('tags');
-      this.getField('description');
+      var subject = this.getField('subject'),
+          tags = this.getTagsArray(),
+          description = this.getField('description');
+
+      for(var number=0; number < 50; number++) {
+        var data = {
+          ticket: {
+            subject: subject + " " + number,
+            comment: {
+              body: description
+            },
+            tags: tags
+          }
+        };
+
+        this.submittedTickets += 1;
+        this.ajax('createTicket', data);
+      }
+    },
+
+    updateProgressStatus: function() {
+      this.createdTickets += 1;
+      var percentage = (this.createdTickets/this.submittedTickets) * 100;
+      this.$('.progress').html(this.renderTemplate('progress', { percentage: percentage}));
     },
 
     getField: function(name) {
       var cssSelector = '.' + name,
           value = this.$(cssSelector).val();
-
-      console.log(name + ': ' + value);
 
       return value;
     }

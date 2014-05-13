@@ -78,3 +78,6 @@
     <button class="save">{{t "form.save"}}</button>
   </div>
 </div>
+
+<div class="progress">
+</div>
