@@ -4,15 +4,21 @@
 <ul class="category-list">
   <li class="first_child">
     <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+    Know your customers
+Gather customer data for more personal and informed conversations 
   </li>
    
   <li class="second_child">
     <img src="{{assetURL "seamless.png"}}" alt="logo" />
+    Engage beyond the ticket
+Proactively reach out to customers to get ahead of issues
   </li>
 
   <li class="third_child">
 
   <img src="{{assetURL "smooth_ops.png"}}" alt="logo" />
+  Build customer loyalty
+Measure and improve the health of your customer relationships 
 
    
   </li>
