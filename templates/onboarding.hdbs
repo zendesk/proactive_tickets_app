@@ -1,15 +1,21 @@
-Onboarding
-<h1> <center>A better customer experience starts with proactive support </h1><br></center>
-<br><center><p>With the Proactive Tickets app, you can create Zendesk tickets on behalf of your customers. Easily create tasks and send follow-up communication to your customers. </center> </p>
-<u1 class="category-list">
+
+<h1> <center>Engage your customer community</h1><br></center>
+<br><center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</center> </p>
+<ul class="category-list">
   <li class="first_child">
-    <img src="">
+   <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+
+   
   <li class="second_child">
+  <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+
   <li class="third_child">
+  <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+</u
 
 <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-    <span class="sr-only">60% Complete</span>
+  <div class="progress-bar" role="progressbar" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percentage}}%;">
+    <span class="sr-only">{{percentage}}% Complete</span>
   </div>
 </div>
 
