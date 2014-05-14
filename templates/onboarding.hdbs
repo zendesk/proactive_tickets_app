@@ -4,6 +4,7 @@
   <br><center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</center> </p>
   
   <button class="btn btn-inverse next">{{t "form.next"}}</button>
+  <button class="btn btn-inverse next">Create Your Campaign</button>
 
   <div id="toggle_header">
     <ul>
@@ -31,10 +32,7 @@
 
     <div id="three_points">
       <ul>
-      <li>
-          <span class="bold">Seamless support workflows</span><br />
-          <span>Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.</span>
-        </li>
+      
         <li>
           <span class="bold">Next level of service</span><br />
           <span>Go from reactive support to proactive engagement. Make your customer interactions more strategic and future-thinking.</span>
@@ -42,6 +40,10 @@
         <li>
           <span class="bold">Better customer care</span><br />
           <span>Engaging customers with proactive support as soon as problems arise provides them with a better customer experience.</span>
+        </li>
+          <li>
+          <span class="bold">Seamless support workflows</span><br />
+          <span>Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.</span>
         </li>
 
     </div>
