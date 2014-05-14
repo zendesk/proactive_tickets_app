@@ -185,6 +185,7 @@
               }
               else if(fieldsData.ticket_fields[i].type == "status"){
                 statusOptions = fieldsData.ticket_fields[i].system_field_options;
+                statusOptions.unshift({ name: this.I18n.t('form.statusnew'), value: 'new' });
               }
             }
 
