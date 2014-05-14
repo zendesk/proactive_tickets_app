@@ -46,15 +46,15 @@
     },
     "form": {
         "customer_list": {
-            "value": "Select which customers to target",
+            "value": "1) Select which customers to target",
             "title": "Customer list label"
         },
         "campaign_name": {
-            "value": "Name your campaign",
+            "value": "2) Name your campaign",
             "title": "Campaign name label"
         },
         "proactive_ticket_fields": {
-            "value": "Create your proactive ticket",
+            "value": "3) Create your proactive ticket",
             "title": "Proactive ticket fields"
         },
         "subject": {
@@ -110,7 +110,7 @@
             "title": "Default subject text"
         },
         "defaultdescription1": {
-            "value": "Hi ",
+            "value": "Hi there,",
             "title": "Default description text part 1"
         },
         "defaultdescription2": {
@@ -158,27 +158,27 @@
             "title": "Tab 2 title"
         },
         "icon1header": {
-            "value": "Seamless agent workflows",
+            "value": "Next level of service",
             "title": "Title for icon 1 on tab 1"
         },
         "icon1body": {
-            "value": "Proactive tickets prevent problems from getting out of hand and provides a more organized way to manage your customer conversations.",
+            "value": "Go from reactive support to proactive engagement. Make your customer interactions more strategic and future-thinking.",
             "title": "Body text for icon 1 on tab 1"
         },
         "icon2header": {
-            "value": "A better customer experience",
+            "value": "Better customer care",
             "title": "Title for icon 2 on tab 1"
         },
         "icon2body": {
-            "value": "Engaging customers with proactive support as soon as problems arise provides them with peace of mind and a better customer experience.",
+            "value": "Engaging customers with proactive support as soon as problems arise provides them with a better customer experience.",
             "title": "Body text for icon 2 on tab 1"
         },
         "icon3header": {
-            "value": "Smooth support operations",
+            "value": "Seamless support workflows",
             "title": "Title for icon 3 on tab 1"
         },
         "icon3body": {
-            "value": "Getting ahead of support issues keeps workload under control, so you can ensure faster resolution times and higher customer satisfaction.",
+            "value": "Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.",
             "title": "Body text for icon 3 on tab 1"
         },
         "question1": {
@@ -206,11 +206,11 @@
             "title": "Third FAQ answer"
         },
         "question4": {
-            "value": "",
+            "value": "How many proactive tickets can I create?",
             "title": "Fourth FAQ question"
         },
         "answer4": {
-            "value": "",
+            "value": "We recommend creating no more than 1,000 proactive tickets per campaign. Remember to not create more tickets than your team can reasonably support.",
             "title": "Fourth FAQ answer"
         }
     },
