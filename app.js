@@ -97,7 +97,7 @@
     highlightRequiredFields: function() {
       var missingRequiredFields = this.missingFields();
       missingRequiredFields.forEach(function(fieldName) {
-        this.$('.' + fieldName).addClass('error');
+        this.$('#' + fieldName).addClass('error');
       });
     },
 
