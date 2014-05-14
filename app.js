@@ -134,9 +134,7 @@
         return {
           url: '/api/v2/tickets.json',
           type: 'POST',
-          data: {
-            ticket: data
-          }
+          data: data
         };
       },
 
@@ -265,13 +263,24 @@
     },
 
     saveClicked: function() {
-      var data;
-      this.recipients.forEach(function(recipient) {
-        data = this.data.ticketData;
-        data.requester_id = recipient.id;
+      var self = this;
+      for(var number=0; number < this.recipients.length; number++) {
+
+        var recipient = this.recipients[number];
+
         this.submittedTickets += 1;
-        this.ajax('createTicket', data);
-      }.bind(this));
+        var newData = {
+          ticket: {
+            subject: self.data.ticketData.subject,
+            comment: {
+              body: self.data.ticketData.comment.body
+            },
+            tags: self.data.ticketData.tags,
+            requester_id: recipient.id
+          }
+        };
+        self.ajax('createTicket', newData);
+      }
       this.generateView();
     },
 
