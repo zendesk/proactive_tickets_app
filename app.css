@@ -145,21 +145,17 @@ footer {
 	font-weight: bold;
 }
 
-#questions p {
+#questions span {
 	padding: 0 4%;
 	font-size: 12px;	
 }
 
 .support_point {
 	width: 340px;
-}
-
-.support_point .left {
+	font-size: 12px;
+	text-align: justify;
 	float: left;
-}
-
-.support_point .right {
-	float: left;
+	margin: 1% 7%;
 }
 
 .category-list {
