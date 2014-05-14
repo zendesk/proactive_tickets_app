@@ -32,7 +32,7 @@
     </div>
     <div class="question-field">
       <label>{{t "form.subject"}}</label>
-      <input value="{{t "form.defaultsubject"}}" type="text" name="subject" class="subject" />
+      <input value="{{t "form.defaultsubject"}}" type="text" name="subject" id="subject" />
     </div>
     <div class="question-field">
       <label>{{t "form.groupassignee"}}</label>

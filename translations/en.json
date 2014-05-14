@@ -237,6 +237,10 @@
       "value":"PRIORITY",
       "title":"Priority label"
     },
+    "status": {
+      "value":"STATUS",
+      "title":"Status label"
+    },
     "description": {
       "value":"DESCRIPTION",
       "title":"Description label"

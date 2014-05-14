@@ -31,6 +31,9 @@
           <strong>{{t "confirmation.priority"}}</strong> {{this.data.ticketData.priority}}
         </div>
       {{/if}}
+      <div class="data">
+        <strong>{{t "confirmation.status"}}</strong> {{this.data.ticketData.status}}
+      </div>
     </div>
     <div class="column">
       <div class="data">
