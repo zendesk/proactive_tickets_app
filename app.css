@@ -103,3 +103,8 @@
 	display: inline-block;
 	padding: 0 6%;
 }
+
+.category-list li p {
+	font-weight: bold;
+	font-size: 17px;
+}

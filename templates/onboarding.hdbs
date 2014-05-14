@@ -6,14 +6,17 @@
     <ul class="category-list">
       <li class="first_child">
         <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+        <p>Better customer support</p>
       </li>
        
       <li class="second_child">
         <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+        <p>Better customer support</p>
       </li>
 
       <li class="third_child">
         <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+        <p>Better customer support</p>
       </li>
     </ul>
   </div>
@@ -22,8 +25,6 @@
       <span class="sr-only">{{percentage}}% Complete</span>
     </div>
   </div>
-
-
     <button class="btn btn-inverse next">{{t "form.next"}}</button>
   </div>
 </div>
