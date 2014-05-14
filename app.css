@@ -156,6 +156,11 @@ footer {
 
 #still_questions {
 	top: 0px;
+	margin-left: 8%;
+}
+
+.selected {
+	font-weight:bold;
 }
 
 .center {

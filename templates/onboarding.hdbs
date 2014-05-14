@@ -9,7 +9,7 @@
     <br /><br />
       <div id="toggle_header">
         <ul>
-          <li id="first"><a class="how_it_works">How it works</a></li>
+          <li id="first"><a class="how_it_works selected">How it works</a></li>
           <li id="second"><a class="still_questions">Still have questions?</a></li
         </ul>
     </div><!--#toggle_header-->
