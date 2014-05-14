@@ -2,6 +2,7 @@
 <div class="confirmation">
   <h1> <center>Engage your customer community</h1><br></center>
   <br><center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</center> </p>
+  <button class="btn btn-inverse next">{{t "form.next"}}</button>
   <div id="three_points">
     <ul class="category-list">
       <li class="first_child">
@@ -23,11 +24,11 @@
       </li>
     </ul>
   </div>
+
   <div class="progress">
     <div class="progress-bar" role="progressbar" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percentage}}%;">
       <span class="sr-only">{{percentage}}% Complete</span>
     </div>
   </div>
-    <button class="btn btn-inverse next">{{t "form.next"}}</button>
-  </div>
+
 </div>
