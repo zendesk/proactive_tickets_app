@@ -6,17 +6,20 @@
     <ul class="category-list">
       <li class="first_child">
         <img src="{{assetURL "better_cx.png"}}" alt="logo" />
-        <p>Better customer support</p>
+        <p>Know your customers</p>
+        <p>Gather customer data for more personal and informed conversations</p>
       </li>
        
       <li class="second_child">
         <img src="{{assetURL "seamless.png"}}" alt="logo" />
-        <p>Better customer support</p>
+        <p>Seamless agent workflows</p>
+        <p>Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.</p>
       </li>
 
       <li class="third_child">
         <img src="{{assetURL "smooth_ops.png"}}" alt="logo" />
         <p>Better customer support</p>
+        <p>Getting ahead of support issues keeps workload under control, so you can ensure faster resolution times and higher customer satisfaction. </p>
       </li>
     </ul>
   </div>
