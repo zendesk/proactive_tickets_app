@@ -158,6 +158,18 @@ footer {
 	top: 0px;
 }
 
+.center {
+	text-align: center;
+}
+
+.center h1 {
+	margin: 0 0 5px 0;
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
 #three_icons {
 	margin-left: auto;
 	margin-right: auto;

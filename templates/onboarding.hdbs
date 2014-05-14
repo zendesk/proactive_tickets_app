@@ -1,65 +1,68 @@
 
-<div class="confirmation proactive_tickets">
-<p><b>Proactive Tickets <p></b>
-  <center><h1>Engage your customer community</h1></center>
-  <center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</p></center> 
-  <button class="btn btn-inverse next">Create Your Campaign</button>
-  <div id="toggle_header">
-    <ul>
-      <li id="first"><a class="how_it_works">How it works</a></li>
-      <li id="second"><a class="still_questions">Still have questions?</a></li
-    </ul>
-  </div>
+<div class="onboarding_wrapper">
+  <div class="center">
+    <p class="caps">Proactive Tickets<p>
+    <h1>Engage your customer community</h1>
+    <p>Zendesk helps you build relationships that are meaningful, personal, and productive</p>
+    <br /><br />
+    <button class="btn btn-inverse next">Create Your Campaign</button>
+    <br /><br />
+      <div id="toggle_header">
+        <ul>
+          <li id="first"><a class="how_it_works">How it works</a></li>
+          <li id="second"><a class="still_questions">Still have questions?</a></li
+        </ul>
+    </div><!--#toggle_header-->
+  </div><!--.center-->
   <div id="toggle_parent">
     <div id="how_it_works">
       <div id="three_icons">
         <ul class="category-list">
-        <li class="third_child">
+          <li>
             <img src="{{assetURL "smooth_ops.png"}}" alt="logo" />
           </li>
-          <li class="first_child">
+          <li>
             <img src="{{assetURL "better_cx.png"}}" alt="logo" /><br />
           </li>
-           
-          <li class="second_child">
+          <li>
             <img src="{{assetURL "seamless.png"}}" alt="logo" />
           </li>        
         </ul>
-        </div>
-        <div id="three_points">
-          <ul>
+      </div><!--#three_icons-->
+      <div id="three_points" class="center">
+        <ul>
+          <li>
+            <span class="bold">Next level of service</span><br />
+            <span>Go from reactive support to proactive engagement. Make your customer interactions more strategic and future-thinking.</span>
+          </li>
+          <li>
+            <span class="bold">Better customer care</span><br />
+            <span>Engaging customers with proactive support as soon as problems arise provides them with a better customer experience.</span>
+          </li>
             <li>
-              <span class="bold">Next level of service</span><br />
-              <span>Go from reactive support to proactive engagement. Make your customer interactions more strategic and future-thinking.</span>
-            </li>
-            <li>
-              <span class="bold">Better customer care</span><br />
-              <span>Engaging customers with proactive support as soon as problems arise provides them with a better customer experience.</span>
-            </li>
-              <li>
-              <span class="bold">Seamless support workflows</span><br />
-              <span>Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.</span>
-            </li>
-        </div>
-      </div>
-        <div id="still_questions">
+            <span class="bold">Seamless support workflows</span><br />
+            <span>Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.</span>
+          </li>
+        </ul>
+      </div><!--#three_points-->
+    </div><!--#how_it_works-->
+    <div id="still_questions" class="center">
       <div class="support_point">
         <span class="bold">How will this impact my ticket workflows?</span><br />
         <span>The Proactive Ticket app will not affect your current ticket workflows. The app simply creates new tickets which will follow the existing workflows you have set up.</span>
-      </div>
+      </div><!--.support_point-->
       <div class="support_point">
         <span class="bold">Can I customize my proactive ticket workflow?</span><br />
         <span>Yes! Simply create a trigger for your proactive tickets. Each proactive ticket campaign has a unique tag which you can set as one of your trigger conditions.</span>
-      </div>
+      </div><!--.support_point-->
       <div class="support_point">
         <span class="bold">How do I view and report on proactive tickets?</span><br />
         <span>The Proactive Tickets app automatically creates a ticket view based on your campaign. You can manage your tickets from that view, as well as create custom reports using Insights.</span>
-      </div>
+      </div><!--.support_point-->
       <div class="support_point">
         <span class="bold">How many proactive tickets can I create?</span><br />
         <span>We recommend creating no more than 1,000 proactive tickets per campaign. Remember to not create more tickets than your team can reasonably support.</span>
-      </div>
-    </div>
-    </div>
-  </div>
-</div>
+      </div><!--.support_point-->
+    </div><!--#still_questions-->
+  </div><!--#toggle_parent-->
+</div><!--.onboarding_wrapper-->
