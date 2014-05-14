@@ -107,12 +107,28 @@
             "value": "Proactive Tickets app",
             "title": "Title of app"
         },
+        "headline1": {
+            "value": "A better customer experience",
+            "title": "Headline to display under title"
+        },
+        "headline2": {
+            "value": "starts with proactive support",
+            "title": "Headline to display under title"
+        },
         "headline": {
             "value": "A better customer experience starts with proactive support",
             "title": "Headline to display under title"
         },
         "subhead": {
             "value": "With the Proactive Tickets app, you can generate Zendesk tickets on behalf of your customers. Easily create tasks and send follow-up communication to your customers.",
+            "title": "Summary statement about proactive ticket app"
+        },
+        "subhead1": {
+            "value": "With the Proactive Tickets app, you can generate Zendesk tickets on behalf of your customers.",
+            "title": "Summary statement about proactive ticket app"
+        },
+        "subhead2": {
+            "value": "Easily create tasks and send follow-up communication to your customers.",
             "title": "Summary statement about proactive ticket app"
         },
         "cta": {
