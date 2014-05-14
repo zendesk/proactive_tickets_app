@@ -107,9 +107,18 @@ footer {
 	margin: 0 5%;
 }
 
-#three_points {
+#three_icons {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#three_points ul {
+	margin: 0;
+}
+
+#three_points ul li {
+	display: inline-block;
+	width: 200px;
 }
 
 .category-list {
@@ -120,13 +129,13 @@ footer {
 .category-list li {
 	display: inline-block;
 	padding: 0 4%;
+	width: 200px;
 }
 
-.category-list li p {
+.category-list li span {
 	font-weight: bold;
 	font-size: 17px;
 }
-
 .questions {
   border-top: 1px solid #ececec;
   margin-left: 0px;

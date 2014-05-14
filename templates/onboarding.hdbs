@@ -7,31 +7,42 @@
 
   <div id="toggle_header">
     <ul>
-      <li id="first">How it works</li>
-      <li id="second">Still have questions?</li
+      <li id="first"><a href="#">How it works</a></li>
+      <li id="second"><a href="#">Still have questions?</a></li
     </ul>
   </div>
 
-  <div id="three_points">
+  <div id="three_icons">
     <ul class="category-list">
       <li class="first_child">
-        <img src="{{assetURL "better_cx.png"}}" alt="logo" />
-        <p>Know your customers</p>
-        <p>Gather customer data for more personal and informed conversations</p>
+        <img src="{{assetURL "better_cx.png"}}" alt="logo" /><br />
       </li>
        
       <li class="second_child">
         <img src="{{assetURL "seamless.png"}}" alt="logo" />
-        <p>Seamless agent workflows</p>
-        <p>Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.</p>
       </li>
 
       <li class="third_child">
         <img src="{{assetURL "smooth_ops.png"}}" alt="logo" />
-        <p>Better customer support</p>
-        <p>Getting ahead of support issues keeps workload under control, so you can ensure faster resolution times and higher customer satisfaction. </p>
       </li>
     </ul>
+    </div>
+
+    <div id="three_points">
+      <ul>
+        <li>
+          <span>Next level of service</span><br />
+          <span>Go from reactive support to proactive engagement. Make your customer interactions more strategic and future-thinking.</span>
+        </li>
+        <li>
+          <span>Better customer care</span><br />
+          <span>Engaging customers with proactive support as soon as problems arise provides them with a better customer experience.</span>
+        </li>
+        <li>
+          <span>Seamless support workflows</span><br />
+          <span>Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.</span>
+        </li>
+    </div>
   </div>
 
  
