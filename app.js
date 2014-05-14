@@ -378,13 +378,17 @@
     },
 
     showHowItWorks: function(){
+      this.$('.selected').removeClass('selected');
       this.$('#still_questions').hide();
       this.$('#how_it_works').show();
+      this.$('.how_it_works').addClass('selected');
     },
 
     showStillQuestions: function(){
+      this.$('.selected').removeClass('selected');
       this.$('#how_it_works').hide();
       this.$('#still_questions').show();
+      this.$('.still_questions').addClass('selected');
     }
 
   };
