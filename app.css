@@ -96,3 +96,13 @@
   padding: 20px;
   border-radius: 10px;
 }
+
+.category-list {
+	position:relative;
+	display: block;
+	margin-left:100px;
+}
+
+.category-list li {
+	float: left;
+}
