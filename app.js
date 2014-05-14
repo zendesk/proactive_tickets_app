@@ -196,7 +196,9 @@
 
             });
 
-            self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive});
+            var activeLists = this.findActiveViews(customerListData.user_views);
+
+            self.switchTo('main', {user_views:activeLists, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive});
           });
         });
       });
@@ -341,6 +343,13 @@
 
     getRecipients: function(listid){
       return this.ajax('customerListMemberships', listid);
+    },
+
+    findActiveViews: function(allLists){
+      return _.filter(allLists, function(list){
+        return list.active === true;
+      });
+
     }
 
   };
