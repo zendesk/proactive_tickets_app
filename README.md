@@ -9,7 +9,7 @@ https://support.zendesk.com/entries/62082233
 #### Contributors
 
 * Jesper Christiansen
-  Kevin Vanscoder
+* Kevin Vanscoder
 
 
 
