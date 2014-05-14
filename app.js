@@ -276,7 +276,12 @@
               body: self.data.ticketData.comment.body
             },
             tags: self.data.ticketData.tags,
-            requester_id: recipient.id
+            requester_id: recipient.id,
+            priority: self.data.ticketData.priority,
+            status: self.data.ticketData.status,
+            type: self.data.ticketData.type,
+            group_id: self.data.ticketData.group_id,
+            assignee_id: self.data.ticketData.assignee_id
           }
         };
         self.ajax('createTicket', newData);
