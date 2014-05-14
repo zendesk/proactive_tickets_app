@@ -24,12 +24,12 @@
     <label for="groupAssignee">
       {{t "form.groupassignee"}}
     </label>
-    <select>
+    <select class="assignee" name="assignee">
       {{#each groupAssignees}}
         <optgroup label={{group}}>
-          <option value="{{id}}">{{group}}</option>
+          <option value="group-{{id}}">{{group}}</option>
           {{#each users}}
-          <option value="{{id}}">&nbsp;&nbsp;{{name}}</option>
+          <option value="agent-{{id}}-{{../id}}">&nbsp;&nbsp;{{name}}</option>
           {{/each}}
         </optgroup>
       {{/each}}

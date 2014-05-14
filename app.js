@@ -220,6 +220,22 @@
           priority = this.getField('priority'),
           description = this.getField('description');
 
+      /* Determines if an assignee was selected or not, and assigns group and assignee to the correct IDs */
+      var groupassignee = this.getField('assignee');
+      var group = '';
+      var assignee = '';
+      groupassignee = groupassignee.split('-');
+
+      if(groupassignee[0] == "group"){
+        group = groupassignee[1];
+      }
+      else if(groupassignee[0] == "agent"){
+        group = groupassignee[2];
+        assignee = groupassignee[1];
+      }
+
+      /* JSON array to create tickets */
+
       this.data = {
         campaignTag: this.getCampaignNameTag(),
         campaignName: this.getField('campaign-name'),
@@ -232,6 +248,8 @@
           status: status,
           type: type,
           priority: priority,
+          group_id: group,
+          assignee_id: assignee
         }
       };
     },
