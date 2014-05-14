@@ -7,16 +7,16 @@
   </li>
    
   <li class="second_child">
-    <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+    <img src="{{assetURL "seamless.png"}}" alt="logo" />
   </li>
 
   <li class="third_child">
-<<<<<<< HEAD
-  <img src="{{assetURL "better_cx.png"}}" alt="logo" />
-=======
-    <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+
+  <img src="{{assetURL "smooth_ops.png"}}" alt="logo" />
+
+   
   </li>
->>>>>>> FETCH_HEAD
+
 </ul>
 
 <div class="buttonfooter">
