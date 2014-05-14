@@ -10,31 +10,31 @@
   <div class="data-container">
     <div class="column">
       <div class="data">
-        <strong>SUBJECT</strong> {{this.data.ticketData.subject}}
+        <strong>{{t "confirmation.subject"}}</strong> {{this.data.ticketData.subject}}
       </div>
       <div class="data">
-        <strong>GROUP/ASSIGNEE</strong> {{this.data.groupname}}{{#if this.data.assigneename}}: {{this.data.assigneename}}{{/if}}
+        <strong>{{t "confirmation.group_assignee"}}</strong> {{this.data.groupname}}{{#if this.data.assigneename}}: {{this.data.assigneename}}{{/if}}
       </div>
       <div class="data">
-        <strong>TAGS</strong>
+        <strong>{{t "confirmation.tags"}}</strong>
         {{#each this.data.ticketData.tags}}
           <span class="token">{{this}}</span>
         {{/each}}
       </div>
       {{#if this.data.ticketData.type}}
         <div class="data">
-          <strong>TYPE</strong> {{this.data.ticketData.type}}
+          <strong>{{t "confirmation.type"}}</strong> {{this.data.ticketData.type}}
         </div>
       {{/if}}
       {{#if this.data.ticketData.priority}}
         <div class="data">
-          <strong>PRIORITY</strong> {{this.data.ticketData.priority}}
+          <strong>{{t "confirmation.priority"}}</strong> {{this.data.ticketData.priority}}
         </div>
       {{/if}}
     </div>
     <div class="column">
       <div class="data">
-        <strong>DESCRIPTION</strong> {{this.data.ticketData.comment.body}}
+        <strong>{{t "confirmation.description"}}</strong> {{this.data.ticketData.comment.body}}
       </div>
     </div>
   </div>

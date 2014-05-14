@@ -10,40 +10,6 @@
             "title": "app name"
         }
     },
-    "loading": {
-        "value": "Welcome to this Sample App",
-        "title": "loading placeholder"
-    },
-    "fetch": {
-        "done": {
-            "value": "Good",
-            "title": "fetch success"
-        },
-        "fail": {
-            "value": "failed to fecth information from the server",
-            "title": "fetch failure"
-        }
-    },
-    "id": {
-        "value": "ID",
-        "title": "user id"
-    },
-    "email": {
-        "value": "Email",
-        "title": "user email"
-    },
-    "name": {
-        "value": "Name",
-        "title": "user name"
-    },
-    "role": {
-        "value": "Role",
-        "title": "user role"
-    },
-    "groups": {
-        "value": "Groups",
-        "title": "user groups"
-    },
     "form": {
         "customer_list": {
             "value": "Select which customers to target",
@@ -120,7 +86,7 @@
     },
     "instructions": {
         "customer_list": {
-            "value": "Choose an existing customer list or create a new list. You will be creating a proactive ticket for each of these customers.",
+            "value": "Choose an existing customer list. You will be creating a proactive ticket for each of these customers.",
             "title": "Customer list selection instructions"
         },
         "campaign_name": {
@@ -230,7 +196,32 @@
         "copy2": {
             "value": "customers. They will receive an email notification with the below ticket details.",
             "title": "Copy 2 for confirmation page"
+        },
+        "subject": {
+          "value":"SUBJECT",
+          "title":"Subject label"
+        },
+        "group_assignee": {
+          "value":"GROUP/ASSIGNEE",
+          "title":"Group/Assignee label"
+        },
+        "tags": {
+          "value":"TAGS",
+          "title":"Tags label"
+        },
+        "type": {
+          "value":"TYPE",
+          "title":"Type label"
+        },
+        "priority": {
+          "value":"PRIORITY",
+          "title":"Priority label"
+        },
+        "description": { 
+          "value":"DESCRIPTION",
+          "title":"Description label"
         }
+
     },
     "done": {
       "header": {
