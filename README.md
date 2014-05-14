@@ -12,6 +12,7 @@ https://support.zendesk.com/entries/62082233
 * Elyse Kanagaratnam
 * Jesper Christiansen
 * Kevin Vanscoder
+* Stephanie Zou
 
 
 
