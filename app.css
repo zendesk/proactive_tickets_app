@@ -6,6 +6,20 @@
   
 }
 
+
 .instructions {
   font-size: 11px;
+}
+
+.missing-fields-note {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ebccd1;
+  border-radius: 4px;
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.error {
+  border: 1px solid red;
 }

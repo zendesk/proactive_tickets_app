@@ -90,6 +90,7 @@
 </div>
 
 <div class="buttonfooter">
+  <div class="missing-fields-note" style="display: none;">Required fields are missing</div>
   <button class="btn previous">{{t "form.previous"}}</button>
   <button class="btn btn-inverse next">{{t "form.next"}}</button>
 </div>
