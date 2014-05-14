@@ -3,7 +3,6 @@
   <h1> <center>Engage your customer community</h1><br></center>
   <br><center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</center> </p>
   
-  <button class="btn btn-inverse next">{{t "form.next"}}</button>
   <button class="btn btn-inverse next">Create Your Campaign</button>
 
   <div id="toggle_header">
