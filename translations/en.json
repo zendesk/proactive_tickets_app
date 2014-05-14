@@ -1,14 +1,14 @@
 {
   "app": {
+    "name": {
+      "value": "Proactive Ticket App",
+      "title": "app name"
+    },
     "package": "app_name",
     "description": {
-        "value": "Play the famous zen tunes in your help desk.",
-        "title": "app description"
+      "value": "Play the famous zen tunes in your help desk.",
+      "title": "app description"
     },
-    "name": {
-        "value": "Proactive Ticket App",
-        "title": "app name"
-    }
   },
   "form": {
     "customer_list": {
