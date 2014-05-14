@@ -1,96 +1,113 @@
-<div class="property_box">
-  <div class="form_field">
-    <label for="customer-list">{{t "form.customer_list"}}*</label>
-    <p class="instructions">{{t "instructions.customer_list"}}</p>
-    <select name="customer-list" class="customer-list">
-      {{#each user_views}}
-        <option value="{{id}}">{{title}}</option>
-      {{/each}}
-    </select>
+<div class="questions">
+  <div class="question">
+    <div class="question-label">
+      <h3>{{t "form.customer_list"}}*</h3>
+      <p class="instructions">{{t "instructions.customer_list"}}</p>
+    </div>
+    <div class="question-field">
+      <select name="customer-list" class="customer-list">
+        {{#each user_views}}
+          <option value="{{id}}">{{title}}</option>
+        {{/each}}
+      </select>
+    </div>
   </div>
-  <div class="form_field">
-    <label for="name">
-      {{t "form.campaign_name"}}*
-    </label>
-    <input value="{{campaignName}}" type="text" name="name" class="campaign-name" />
+  <div class="question">
+    <div class="question-label">
+      <h3>
+        {{t "form.campaign_name"}}*
+      </h3>
+    </div>
+    <div class="question-field">
+      <input value="{{campaignName}}" type="text" name="name" class="campaign-name" />
+    </div>
   </div>
-  <div class="form_field">
-    <label for="subject">
-      {{t "form.subject"}}*
-    </label>
-    <input value="{{t "form.defaultsubject"}}" type="text" name="subject" class="subject" />
-  </div>
-  <div class="form_field">
-    <label for="groupAssignee">
-      {{t "form.groupassignee"}}
-    </label>
-    <select class="assignee" name="assignee" id="assignee">
-      {{#each groupAssignees}}
-        <optgroup label={{group}}>
-          <option value="group-{{id}}">{{group}}</option>
-          {{#each users}}
-          <option value="agent-{{id}}-{{../id}}">&nbsp;&nbsp;{{name}}</option>
+  <div class="question ticket-fields">
+    <div class="question-label">
+      <h3>
+        {{t "form.proactive_ticket_fields"}}
+      </h3>
+      <p class="instructions">{{t "instructions.proactive_ticket_fields"}}</p>
+    </div>
+    <div class="question-field">
+      <label>{{t "form.subject"}}</label>
+      <input value="{{t "form.defaultsubject"}}" type="text" name="subject" class="subject" />
+    </div>
+    <div class="question-field">
+      <label>{{t "form.groupassignee"}}</label>
+      <select class="assignee" name="assignee" id="assignee">
+        {{#each groupAssignees}}
+          <optgroup label={{group}}>
+            <option value="group-{{id}}">{{group}}</option>
+            {{#each users}}
+            <option value="agent-{{id}}-{{../id}}">&nbsp;&nbsp;{{name}}</option>
+            {{/each}}
+          </optgroup>
+        {{/each}}
+      </select>
+    </div>
+    <div class="question-field">
+      <label>{{t "form.tags"}}</label>
+      <input value="" type="text" name="tags" class="tags"/>
+    </div>
+    {{#if hasPriority}}
+      <div class="question-field">
+        <label>{{t "form.priority"}}</label>
+        <select class="priority" name="priority">
+          <option value="">-</option>
+          {{#each priorities}}
+            <option value="{{value}}">{{name}}</option>
           {{/each}}
-        </optgroup>
-      {{/each}}
-    </select>
-  </div>
-  <div class="form_field">
-    <label for="tags">
-      {{t "form.tags"}}
-    </label>
-    <input value="" type="text" name="tags" class="tags"/>
-  </div>
-  {{#if hasPriority}}
-  <div class="form_field">
-    <label for="priority">
-      {{t "form.priority"}}
-    </label>
-    <select class="priority" name="priority">
-      <option value="">-</option>
-      {{#each priorities}}
-        <option value="{{value}}">{{name}}</option>
-      {{/each}}
-    </select>
-  </div>
-  {{/if}}
-  {{#if hasType}}
-  <div class="form_field">
-    <label for="type">
-      {{t "form.tickettype"}}
-    </label>
-    <select class="type" name="type">
-      <option value="">-</option>
-      {{#each types}}
-        <option value="{{value}}">{{name}}</option>
-      {{/each}}
-    </select>
-  </div>
-  {{/if}}
-    <div class="form_field">
-    <label for="status">
-      {{t "form.status"}}
-    </label>
-    <select class="status" name="status">
-      <option value="new">{{t "form.statusnew"}}</option>
-      {{#each statuses}}
-        <option value="{{value}}">{{name}}</option>
-      {{/each}}
-    </select>
-  </div>
-  <div class="form_field">
-    <label for="description">
-      {{t "form.description"}}*
-    </label>
-    <textarea name="description" class="description">{{t "form.defaultdescription1"}} \{{ticket.requester.first_name}},&#13;&#10;&#13;{{t "form.defaultdescription2"}}</textarea>
+        </select>
+      </div>
+    {{/if}}
+    {{#if hasType}}
+      <div class="question-field">
+        <label>{{t "form.tickettype"}}</label>
+        <select class="type" name="type">
+          <option value="">-</option>
+          {{#each types}}
+            <option value="{{value}}">{{name}}</option>
+          {{/each}}
+        </select>
+      </div>
+    {{/if}}
+    <div class="question-field">
+      <label>{{t "form.status"}}</label>
+      <select class="status" name="status">
+        <option value="new">{{t "form.statusnew"}}</option>
+        {{#each statuses}}
+          <option value="{{value}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="question-field">
+      <label>{{t "form.status"}}</label>
+      <select class="status" name="status">
+        <option value="new">{{t "form.statusnew"}}</option>
+        {{#each statuses}}
+          <option value="{{value}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="question-field description-field">
+      <label>{{t "form.description"}}</label>
+      <textarea name="description" class="description" rows="12">{{t "form.defaultdescription1"}}&#13;&#10;&#13;{{t "form.defaultdescription2"}}</textarea>
+    </div>
+    <div style="clear: both;"></div>
   </div>
 </div>
 
-<div class="progress">
-</div>
 
-<div class="buttonfooter">
-  <div class="missing-fields-note" style="display: none;">Required fields are missing</div>
-  <button class="btn previous">{{t "form.previous"}}</button>
-  <button class="btn btn-inverse next">{{t "form.next"}}</button>
-</div>
+<footer>
+  <div class="pull-left discreet">
+    Powered by Cocktails and Donuts
+  </div>
+  <div class="action-buttons pull-right">
+    <div class="missing-fields-note" style="display: none;">
+      Required fields are missing
+    </div>
+    <button class="btn previous">{{t "form.previous"}}</button>
+    <button class="btn btn-inverse next">{{t "form.next"}}</button>
+  </div>
+</footer>

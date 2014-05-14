@@ -2,6 +2,19 @@
   background-color: red;
 }
 
+footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  height: 53px;
+  margin: 0 -10px -10px;
+  padding: 20px 10px 0 10px;
+
+  .discreet {
+    color: #aaa;
+    margin-top: 10px;
+  }
+}
+
 .buttonfooter {
   clear: both;
 }
@@ -14,14 +27,14 @@
 
 .instructions {
   font-size: 11px;
+  color: #B8B7B8;
+  margin-bottom: 7px;
 }
 
 .missing-fields-note {
-  padding: 15px;
   margin-bottom: 20px;
-  border: 1px solid #ebccd1;
-  border-radius: 4px;
-  background-color: #f2dede;
+  display: inline-block;
+  margin-right: 10px;
   color: #a94442;
 }
 
@@ -112,4 +125,102 @@
 .category-list li p {
 	font-weight: bold;
 	font-size: 17px;
+}
+
+.questions {
+  border-top: 1px solid #ececec;
+  margin-left: 0px;
+  padding-top: 30px;
+
+  .question {
+    counter-increment: number;
+    margin: 0px;
+    margin-bottom: 30px;
+    padding-left: 40px;
+    position: relative;
+    clear: both;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ececec;
+
+    &.ticket-fields {
+      position: relative;
+
+      .question-field {
+        margin-left: 438px;
+        position: static;
+        margin-top: 15px;
+
+        &.description-field {
+          position: absolute;
+          margin-left: 370px;
+          margin-top: 0;
+          top: 0px;
+        }
+
+        label {
+          font-weight: bold;
+          margin-bottom: 3px;
+        }
+      }
+
+      .question-label {
+        float: left;
+      }
+    }
+
+    .question-label {
+      width: 326px;
+      font-size: 13px;
+    }
+
+    h3 {
+      font-size: 16px;
+      line-height: 14px;
+      margin-bottom: 5px;
+
+      &:before {
+        content: counter(number);
+        color: #999;
+        font-weight: bold;
+        font-size: 14px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 19px;
+        width: 14px;
+        border: solid 1px #d5d5d5;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        padding: 0px;
+        padding-left: 6px;
+        line-height: 18px;
+      }
+    }
+
+    p {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .question-field {
+      position: absolute;
+      top: 5px;
+      left: 477px;
+      width: 300px;
+
+      &.two {
+        top: 60px;
+      }
+
+      &.three {
+        top: 115px;
+      }
+
+      &.four {
+        top: 170px;
+      }
+    }
+  }
+
 }

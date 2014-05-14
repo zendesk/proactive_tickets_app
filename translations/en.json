@@ -46,15 +46,15 @@
     },
     "form": {
         "customer_list": {
-            "value": "1) Select which customers to target",
+            "value": "Select which customers to target",
             "title": "Customer list label"
         },
         "campaign_name": {
-            "value": "2) Name your campaign",
+            "value": "Name your campaign",
             "title": "Campaign name label"
         },
         "proactive_ticket_fields": {
-            "value": "3) Create your proactive ticket",
+            "value": "Create your proactive ticket",
             "title": "Proactive ticket fields"
         },
         "subject": {
