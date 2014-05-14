@@ -11,8 +11,6 @@
   </li>
 
   <li class="third_child">
-  <img src="{{assetURL "better_cx.png"}}" alt="logo" />
-</u
     <img src="{{assetURL "better_cx.png"}}" alt="logo" />
   </li>
 </ul>
