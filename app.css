@@ -100,6 +100,12 @@ footer {
   margin-right: 100px;
   padding: 20px;
   border-radius: 10px;
+
+  .btn-inverse {
+    border: none;
+    background: #FFA909;
+    text-shadow: none;
+  }
 }
 
 #toggle_header ul li {
