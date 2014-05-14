@@ -19,7 +19,10 @@
       'click .save':'saveClicked',
       'createTicket.done': 'updateProgressStatus',
       'click .previous': 'goToPrevious',
-      'click .next': 'goToNext'
+      'click .next': 'goToNext',
+      'click .how_it_works':'showHowItWorks',
+      'click .still_questions':'showStillQuestions'
+
     },
 
     goToTemplate: function() {
@@ -30,6 +33,7 @@
           this.switchTo('loading');
           this.switchTo('onboarding');
           this.disableNextButton(false);
+          this.showHowItWorks();
           break;
         case 1:
           this.switchTo('loading');
@@ -364,6 +368,16 @@
         return list.active === true;
       });
 
+    },
+
+    showHowItWorks: function(){
+      this.$('#still_questions').hide();
+      this.$('#how_it_works').show();
+    },
+
+    showStillQuestions: function(){
+      this.$('#how_it_works').hide();
+      this.$('#still_questions').show();
     }
 
   };
