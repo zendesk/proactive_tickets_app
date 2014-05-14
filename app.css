@@ -111,6 +111,10 @@ footer {
   }
 }
 
+#toggle_header {
+	margin: 20px 0;
+}
+
 #toggle_header ul li {
 	display: inline;
 	margin: 0 5%;
