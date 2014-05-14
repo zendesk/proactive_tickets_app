@@ -1,52 +1,48 @@
 
-<div class="confirmation">
-<h1></h1>
+<div class="confirmation proactive_tickets">
 <p><b>Proactive Tickets <p></b>
   <center><h1>Engage your customer community</h1></center>
   <center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</p></center> 
-  
   <button class="btn btn-inverse next">Create Your Campaign</button>
-
   <div id="toggle_header">
     <ul>
       <li id="first"><a href="#">How it works</a></li>
       <li id="second"><a href="#">Still have questions?</a></li
     </ul>
   </div>
-
-  <div class="how_it_works">
-    <div id="three_icons">
-      <ul class="category-list">
-      <li class="third_child">
-          <img src="{{assetURL "smooth_ops.png"}}" alt="logo" />
-        </li>
-        <li class="first_child">
-          <img src="{{assetURL "better_cx.png"}}" alt="logo" /><br />
-        </li>
-         
-        <li class="second_child">
-          <img src="{{assetURL "seamless.png"}}" alt="logo" />
-        </li>        
-      </ul>
-      </div>
-      <div id="three_points">
-        <ul>
-          <li>
-            <span class="bold">Next level of service</span><br />
-            <span>Go from reactive support to proactive engagement. Make your customer interactions more strategic and future-thinking.</span>
+  <div id="toggle_parent">
+    <div id="how_it_works">
+      <div id="three_icons">
+        <ul class="category-list">
+        <li class="third_child">
+            <img src="{{assetURL "smooth_ops.png"}}" alt="logo" />
           </li>
-          <li>
-            <span class="bold">Better customer care</span><br />
-            <span>Engaging customers with proactive support as soon as problems arise provides them with a better customer experience.</span>
+          <li class="first_child">
+            <img src="{{assetURL "better_cx.png"}}" alt="logo" /><br />
           </li>
+           
+          <li class="second_child">
+            <img src="{{assetURL "seamless.png"}}" alt="logo" />
+          </li>        
+        </ul>
+        </div>
+        <div id="three_points">
+          <ul>
             <li>
-            <span class="bold">Seamless support workflows</span><br />
-            <span>Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.</span>
-          </li>
+              <span class="bold">Next level of service</span><br />
+              <span>Go from reactive support to proactive engagement. Make your customer interactions more strategic and future-thinking.</span>
+            </li>
+            <li>
+              <span class="bold">Better customer care</span><br />
+              <span>Engaging customers with proactive support as soon as problems arise provides them with a better customer experience.</span>
+            </li>
+              <li>
+              <span class="bold">Seamless support workflows</span><br />
+              <span>Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.</span>
+            </li>
+        </div>
       </div>
-    </div>
-
-    <div class="questions">
+        <div id="still_questions">
       <div class="support_point">
         <span class="bold">How will this impact my ticket workflows?</span><br />
         <span>The Proactive Ticket app will not affect your current ticket workflows. The app simply creates new tickets which will follow the existing workflows you have set up.</span>
@@ -64,7 +60,6 @@
         <span>We recommend creating no more than 1,000 proactive tickets per campaign. Remember to not create more tickets than your team can reasonably support.</span>
       </div>
     </div>
-
+    </div>
   </div>
-
 </div>

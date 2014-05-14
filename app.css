@@ -116,6 +116,11 @@ footer {
   }
 }
 
+.proactive_tickets p, .proactive_tickets h1 {
+	margin-bottom: 10px;
+	width: 100%;
+}
+
 #toggle_header {
 	margin: 20px 0;
 }
@@ -123,6 +128,20 @@ footer {
 #toggle_header ul li {
 	display: inline;
 	margin: 0 5%;
+}
+
+#toggle_parent {
+	position: relative;
+}
+
+#how_it_works {
+	top: 0px;
+}
+
+#still_questions {
+	position: absolute;
+	top: 0px;
+	visibility: hidden;
 }
 
 #three_icons {
