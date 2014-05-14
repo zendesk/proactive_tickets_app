@@ -82,7 +82,7 @@
     <label for="description">
       {{t "form.description"}}*
     </label>
-    <textarea name="description" class="description">{{t "form.defaultdescription1"}}&#13;&#10;&#13;{{t "form.defaultdescription2"}}</textarea>
+    <textarea name="description" class="description">{{t "form.defaultdescription1"}} \{{ticket.requester.first_name}},&#13;&#10;&#13;{{t "form.defaultdescription2"}}</textarea>
   </div>
 </div>
 
