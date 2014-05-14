@@ -1,245 +1,244 @@
 {
-    "app": {
-        "package": "app_name",
-        "description": {
-            "value": "Play the famous zen tunes in your help desk.",
-            "title": "app description"
-        },
-        "name": {
-            "value": "Proactive Ticket App",
-            "title": "app name"
-        }
+  "app": {
+    "package": "app_name",
+    "description": {
+        "value": "Play the famous zen tunes in your help desk.",
+        "title": "app description"
     },
-    "form": {
-        "customer_list": {
-            "value": "Vælg hvilken kundeliste du vil bruge",
-            "title": "Customer list label"
-        },
-        "campaign_name": {
-            "value": "Navngiv din kampagne",
-            "title": "Campaign name label"
-        },
-        "proactive_ticket_fields": {
-            "value": "Opret din proaktive ticket",
-            "title": "Proactive ticket fields"
-        },
-        "subject": {
-            "value": "Emne",
-            "title": "Subject label"
-        },
-        "tags": {
-            "value": "Tags",
-            "title": "Tags label"
-        },
-        "description": {
-            "value": "Beskrivelse",
-            "title": "Description label"
-        },
-        "previous": {
-            "value": "Forrige",
-            "title": "Previous button text"
-        },
-        "next": {
-            "value": "Næste",
-            "title": "Next button text"
-        },
-        "save": {
-            "value": "Gem",
-            "title": "Save button text"
-        },
-        "send": {
-            "value": "Send",
-            "title": "Send button text"
-        },
-        "priority": {
-            "value": "Prioritet",
-            "title": "Priority label"
-        },
-        "tickettype": {
-            "value": "Type",
-            "title": "Type label"
-        },
-        "status": {
-            "value": "Status",
-            "title": "Status label"
-        },
-        "groupassignee": {
-            "value": "Gruppe og ansvarlige",
-            "title": "Group and Assignee label"
-        },
-        "statusnew": {
-            "value": "Ny",
-            "title": "New"
-        },
-        "defaultsubject": {
-            "value": "Ticket oprettet på vegne af dig",
-            "title": "Default subject text"
-        },
-        "defaultdescription1": {
-            "value": "Hej,",
-            "title": "Default description text part 1"
-        },
-        "defaultdescription2": {
-            "value": "Denne ticket var oprettet på vegne af dig",
-            "title": "Default description text part 2"
-        }
-    },
-    "instructions": {
-        "customer_list": {
-            "value": "Vælg en eksisterende kundeliste. Du vil oprette proaktive tickets for hver af disse kunder",
-            "title": "Customer list selection instructions"
-        },
-        "campaign_name": {
-            "value": "Vælg et unikt navn for denne kampagne. Vi vil automatisk tagge din ticket med dette navn, så du kan oprette rapporter for denne kampagne.",
-            "title": "Campaign name instructions"
-        },
-        "proactive_ticket_fields": {
-            "value": "Udfyld dine ticket detaljer. Har du brug for hjælp,",
-            "title": "Proactive ticket fields instructions"
-        },
-        "this_user_guide": {
-          "value":"check denne guide.",
-          "title":"this user guide."
-        }
-    },
-    "intro": {
-        "title": {
-            "value": "Proaktive Tickets app",
-            "title": "Title of app"
-        },
-        "headline": {
-            "value": "En bedre kundeoplevelse starter med proaktiv support",
-            "title": "Headline to display under title"
-        },
-        "subhead": {
-            "value": "Med den Proaktive Tickets app, kan du oprette Zendesk tickets på baggrund af dine kunder. Du kan nemt oprette opgaver og proaktivt kommunikere med dine kunder.",
-            "title": "Summary statement about proactive ticket app"
-        },
-        "cta": {
-            "value": "Opret en kampagne",
-            "title": "Call to action button to create a campaign"
-        },
-        "tab1": {
-            "value": "Sådan virker det",
-            "title": "Tab 1 title"
-        },
-        "tab2": {
-            "value": "Har du stadig spørgsmål?",
-            "title": "Tab 2 title"
-        },
-        "icon1header": {
-            "value": "Næste skridt for din service",
-            "title": "Title for icon 1 on tab 1"
-        },
-        "icon1body": {
-            "value": "Gå fra opfølgende support til proaktiv support. Gør dine kunde interaktioner mere strategiske og fremtidssikre.",
-            "title": "Body text for icon 1 on tab 1"
-        },
-        "icon2header": {
-            "value": "Bedre kundepleje",
-            "title": "Title for icon 2 on tab 1"
-        },
-        "icon2body": {
-            "value": "Engager dine kunder med proaktiv support så snart et problem opstår, giver dine kunder en bedre kundeoplevelse.",
-            "title": "Body text for icon 2 on tab 1"
-        },
-        "icon3header": {
-            "value": "Support arbejdsflows",
-            "title": "Title for icon 3 on tab 1"
-        },
-        "icon3body": {
-            "value": "Opret proaktive tickets giver dit support team en organiseret mulighed for at tage styring af kommunikationen med dine kunder.",
-            "title": "Body text for icon 3 on tab 1"
-        },
-        "question1": {
-            "value": "Hvordan påvirker dette mine ticket workflow?",
-            "title": "First FAQ question"
-        },
-        "answer1": {
-            "value": "Den Proaktive Ticket app vil ikke påvirke dine eksisterende ticket workflows. Denne app opretter nye tickets, som vil følge de eksisterende workflows du har sat op.",
-            "title": "First FAQ answer"
-        },
-        "question2": {
-            "value": "Can I customize my proactive ticket workflow?",
-            "value": "Kan jeg skræddersy mit proaktive ticket workflow?",
-            "title": "Second FAQ question"
-        },
-        "answer2": {
-            "value": "Ja! Opret en ny trigger for dine proaktive tickets. Hver proaktive ticket kampagne har et unikt tag, som du kan sætte som en af dine trigger conditions.",
-            "title": "Second FAQ answer"
-        },
-        "question3": {
-            "value": "Hvordan ser og rapporterer jeg på proaktive tickets?",
-            "title": "Third FAQ question"
-        },
-        "answer3": {
-            "value": "Den Proaktive Tickets app opretter automatisk et ticket view baseret på din kampagne. Du kan håndtere dinet ickets fra dette view og ligeledes oprette rapporter ved hjælp af Insights.",
-            "title": "Third FAQ answer"
-        },
-        "question4": {
-            "value": "Hvor mange proaktive tickets kan jeg oprette?",
-            "title": "Fourth FAQ question"
-        },
-        "answer4": {
-            "value": "Vi anbefaler du holder antallet til under 1.000 proaktive tickets per kampagne. Husk ikke at oprette flere tickets end dit team kan håndtere.",
-            "title": "Fourth FAQ answer"
-        }
-    },
-    "confirmation": {
-        "title": {
-            "value": "Proaktive Tickets",
-            "title": "Heading for confirmation page"
-        },
-        "header": {
-            "value": "Tillykke!",
-            "title": "Heading 2 for confirmation page"
-        },
-        "copy1": {
-            "value": "Du er ved at oprette proaktive tickets på baggrund af",
-            "title": "Copy 1 for confirmation page"
-        },
-        "copy2": {
-            "value": "kunder. De vil modtage en email med nedenstående detaljer.",
-            "title": "Copy 2 for confirmation page"
-        },
-        "subject": {
-          "value":"EMNE",
-          "title":"Subject label"
-        },
-        "group_assignee": {
-          "value":"GRUPPE/ANSVARLIGE",
-          "title":"Group/Assignee label"
-        },
-        "tags": {
-          "value":"TAGS",
-          "title":"Tags label"
-        },
-        "type": {
-          "value":"TYPE",
-          "title":"Type label"
-        },
-        "priority": {
-          "value":"PRIORITET",
-          "title":"Priority label"
-        },
-        "description": { 
-          "value":"BESKRIVELSE",
-          "title":"Description label"
-        }
-
-    },
-    "done": {
-      "header": {
-        "value": "Tillykke! Dette er et enormt skridt for din kundeservice.",
-        "title": "Done screen header"
-      },
-      "supporting_copy": {
-        "value": "Dine kunder vil være taknemmelige for den ekstra opmærksomhed du giver dem. Vi har også oprettet et specielt ticket view så du nemt kan få et overblik over de proaktive tickets der er oprettet",
-        "title": "Supporting copy for done screen"
-      },
-      "go_to_view": {
-        "value": "Gå til ticket view",
-        "title": "Go to ticket view link"
-      }
+    "name": {
+        "value": "Proactive Ticket App",
+        "title": "app name"
     }
+  },
+  "form": {
+    "customer_list": {
+        "value": "Vælg hvilken kundeliste du vil bruge",
+        "title": "Customer list label"
+    },
+    "campaign_name": {
+        "value": "Navngiv din kampagne",
+        "title": "Campaign name label"
+    },
+    "proactive_ticket_fields": {
+        "value": "Opret din proaktive ticket",
+        "title": "Proactive ticket fields"
+    },
+    "subject": {
+        "value": "Emne",
+        "title": "Subject label"
+    },
+    "tags": {
+        "value": "Tags",
+        "title": "Tags label"
+    },
+    "description": {
+        "value": "Beskrivelse",
+        "title": "Description label"
+    },
+    "previous": {
+        "value": "Forrige",
+        "title": "Previous button text"
+    },
+    "next": {
+        "value": "Næste",
+        "title": "Next button text"
+    },
+    "save": {
+        "value": "Gem",
+        "title": "Save button text"
+    },
+    "send": {
+        "value": "Send",
+        "title": "Send button text"
+    },
+    "priority": {
+        "value": "Prioritet",
+        "title": "Priority label"
+    },
+    "tickettype": {
+        "value": "Type",
+        "title": "Type label"
+    },
+    "status": {
+        "value": "Status",
+        "title": "Status label"
+    },
+    "groupassignee": {
+        "value": "Gruppe og ansvarlige",
+        "title": "Group and Assignee label"
+    },
+    "statusnew": {
+        "value": "Ny",
+        "title": "New"
+    },
+    "defaultsubject": {
+        "value": "Ticket oprettet på vegne af dig",
+        "title": "Default subject text"
+    },
+    "defaultdescription1": {
+        "value": "Hej,",
+        "title": "Default description text part 1"
+    },
+    "defaultdescription2": {
+        "value": "Denne ticket var oprettet på vegne af dig",
+        "title": "Default description text part 2"
+    }
+  },
+  "instructions": {
+    "customer_list": {
+        "value": "Vælg en eksisterende kundeliste. Du vil oprette proaktive tickets for hver af disse kunder",
+        "title": "Customer list selection instructions"
+    },
+    "campaign_name": {
+        "value": "Vælg et unikt navn for denne kampagne. Vi vil automatisk tagge din ticket med dette navn, så du kan oprette rapporter for denne kampagne.",
+        "title": "Campaign name instructions"
+    },
+    "proactive_ticket_fields": {
+        "value": "Udfyld dine ticket detaljer. Har du brug for hjælp,",
+        "title": "Proactive ticket fields instructions"
+    },
+    "this_user_guide": {
+      "value":"check denne guide.",
+      "title":"this user guide."
+    }
+  },
+  "intro": {
+    "title": {
+        "value": "Proaktive Tickets app",
+        "title": "Title of app"
+    },
+    "headline": {
+        "value": "En bedre kundeoplevelse starter med proaktiv support",
+        "title": "Headline to display under title"
+    },
+    "subhead": {
+        "value": "Med den Proaktive Tickets app, kan du oprette Zendesk tickets på baggrund af dine kunder. Du kan nemt oprette opgaver og proaktivt kommunikere med dine kunder.",
+        "title": "Summary statement about proactive ticket app"
+    },
+    "cta": {
+        "value": "Opret en kampagne",
+        "title": "Call to action button to create a campaign"
+    },
+    "tab1": {
+        "value": "Sådan virker det",
+        "title": "Tab 1 title"
+    },
+    "tab2": {
+        "value": "Har du stadig spørgsmål?",
+        "title": "Tab 2 title"
+    },
+    "icon1header": {
+        "value": "Næste skridt for din service",
+        "title": "Title for icon 1 on tab 1"
+    },
+    "icon1body": {
+        "value": "Gå fra opfølgende support til proaktiv support. Gør dine kunde interaktioner mere strategiske og fremtidssikre.",
+        "title": "Body text for icon 1 on tab 1"
+    },
+    "icon2header": {
+        "value": "Bedre kundepleje",
+        "title": "Title for icon 2 on tab 1"
+    },
+    "icon2body": {
+        "value": "Engager dine kunder med proaktiv support så snart et problem opstår, giver dine kunder en bedre kundeoplevelse.",
+        "title": "Body text for icon 2 on tab 1"
+    },
+    "icon3header": {
+        "value": "Support arbejdsflows",
+        "title": "Title for icon 3 on tab 1"
+    },
+    "icon3body": {
+        "value": "Opret proaktive tickets giver dit support team en organiseret mulighed for at tage styring af kommunikationen med dine kunder.",
+        "title": "Body text for icon 3 on tab 1"
+    },
+    "question1": {
+        "value": "Hvordan påvirker dette mine ticket workflow?",
+        "title": "First FAQ question"
+    },
+    "answer1": {
+        "value": "Den Proaktive Ticket app vil ikke påvirke dine eksisterende ticket workflows. Denne app opretter nye tickets, som vil følge de eksisterende workflows du har sat op.",
+        "title": "First FAQ answer"
+    },
+    "question2": {
+        "value": "Can I customize my proactive ticket workflow?",
+        "value": "Kan jeg skræddersy mit proaktive ticket workflow?",
+        "title": "Second FAQ question"
+    },
+    "answer2": {
+        "value": "Ja! Opret en ny trigger for dine proaktive tickets. Hver proaktive ticket kampagne har et unikt tag, som du kan sætte som en af dine trigger conditions.",
+        "title": "Second FAQ answer"
+    },
+    "question3": {
+        "value": "Hvordan ser og rapporterer jeg på proaktive tickets?",
+        "title": "Third FAQ question"
+    },
+    "answer3": {
+        "value": "Den Proaktive Tickets app opretter automatisk et ticket view baseret på din kampagne. Du kan håndtere dinet ickets fra dette view og ligeledes oprette rapporter ved hjælp af Insights.",
+        "title": "Third FAQ answer"
+    },
+    "question4": {
+        "value": "Hvor mange proaktive tickets kan jeg oprette?",
+        "title": "Fourth FAQ question"
+    },
+    "answer4": {
+        "value": "Vi anbefaler du holder antallet til under 1.000 proaktive tickets per kampagne. Husk ikke at oprette flere tickets end dit team kan håndtere.",
+        "title": "Fourth FAQ answer"
+    }
+  },
+  "confirmation": {
+    "title": {
+        "value": "Proaktive Tickets",
+        "title": "Heading for confirmation page"
+    },
+    "header": {
+        "value": "Tillykke!",
+        "title": "Heading 2 for confirmation page"
+    },
+    "copy1": {
+        "value": "Du er ved at oprette proaktive tickets på baggrund af",
+        "title": "Copy 1 for confirmation page"
+    },
+    "copy2": {
+        "value": "kunder. De vil modtage en email med nedenstående detaljer.",
+        "title": "Copy 2 for confirmation page"
+    },
+    "subject": {
+      "value":"EMNE",
+      "title":"Subject label"
+    },
+    "group_assignee": {
+      "value":"GRUPPE/ANSVARLIGE",
+      "title":"Group/Assignee label"
+    },
+    "tags": {
+      "value":"TAGS",
+      "title":"Tags label"
+    },
+    "type": {
+      "value":"TYPE",
+      "title":"Type label"
+    },
+    "priority": {
+      "value":"PRIORITET",
+      "title":"Priority label"
+    },
+    "description": {
+      "value":"BESKRIVELSE",
+      "title":"Description label"
+    }
+  },
+  "done": {
+    "header": {
+      "value": "Tillykke! Dette er et enormt skridt for din kundeservice.",
+      "title": "Done screen header"
+    },
+    "supporting_copy": {
+      "value": "Dine kunder vil være taknemmelige for den ekstra opmærksomhed du giver dem. Vi har også oprettet et specielt ticket view så du nemt kan få et overblik over de proaktive tickets der er oprettet",
+      "title": "Supporting copy for done screen"
+    },
+    "go_to_view": {
+      "value": "Gå til ticket view",
+      "title": "Go to ticket view link"
+    }
+  }
 }

@@ -1,260 +1,260 @@
 {
-    "app": {
-        "package": "app_name",
-        "description": {
-            "value": "Play the famous zen tunes in your help desk.",
-            "title": "app description"
-        },
-        "name": {
-            "value": "Proactive Ticket App",
-            "title": "app name"
-        }
+  "app": {
+    "package": "app_name",
+    "description": {
+        "value": "Play the famous zen tunes in your help desk.",
+        "title": "app description"
     },
-    "form": {
-        "customer_list": {
-            "value": "Select which customers to target",
-            "title": "Customer list label"
-        },
-        "campaign_name": {
-            "value": "Name your campaign",
-            "title": "Campaign name label"
-        },
-        "proactive_ticket_fields": {
-            "value": "Create your proactive ticket",
-            "title": "Proactive ticket fields"
-        },
-        "subject": {
-            "value": "Subject",
-            "title": "Subject label"
-        },
-        "tags": {
-            "value": "Tags",
-            "title": "Tags label"
-        },
-        "description": {
-            "value": "Description",
-            "title": "Description label"
-        },
-        "previous": {
-            "value": "Previous",
-            "title": "Previous button text"
-        },
-        "next": {
-            "value": "Next",
-            "title": "Next button text"
-        },
-        "save": {
-            "value": "Save",
-            "title": "Save button text"
-        },
-        "send": {
-            "value": "Send",
-            "title": "Send button text"
-        },
-        "priority": {
-            "value": "Priority",
-            "title": "Priority label"
-        },
-        "tickettype": {
-            "value": "Type",
-            "title": "Type label"
-        },
-        "status": {
-            "value": "Status",
-            "title": "Status label"
-        },
-        "groupassignee": {
-            "value": "Group and Assignee",
-            "title": "Group and Assignee label"
-        },
-        "statusnew": {
-            "value": "New",
-            "title": "New"
-        },
-        "defaultsubject": {
-            "value": "Ticket created on your behalf",
-            "title": "Default subject text"
-        },
-        "defaultdescription1": {
-            "value": "Hi there,",
-            "title": "Default description text part 1"
-        },
-        "defaultdescription2": {
-            "value": "This ticket was created on your behalf.",
-            "title": "Default description text part 2"
-        }
-    },
-    "instructions": {
-        "customer_list": {
-            "value": "Choose an existing customer list. You will be creating a proactive ticket for each of these customers.",
-            "title": "Customer list selection instructions"
-        },
-        "campaign_name": {
-            "value": "Create a unique identifier for this campaign. We’ll automatically tag your ticket with this name so you can report on this campaign.",
-            "title": "Campaign name instructions"
-        },
-        "proactive_ticket_fields": {
-            "value": "Fill in your ticket details. If you need help, check out",
-            "title": "Proactive ticket fields instructions"
-        },
-        "this_user_guide": {
-          "value":"this user guide.",
-          "title":"this user guide."
-        }
-    },
-    "intro": {
-        "title": {
-            "value": "Proactive Tickets app",
-            "title": "Title of app"
-        },
-        "headline1": {
-            "value": "A better customer experience",
-            "title": "Headline to display under title"
-        },
-        "headline2": {
-            "value": "starts with proactive support",
-            "title": "Headline to display under title"
-        },
-        "headline": {
-            "value": "A better customer experience starts with proactive support",
-            "title": "Headline to display under title"
-        },
-        "subhead": {
-            "value": "With the Proactive Tickets app, you can generate Zendesk tickets on behalf of your customers. Easily create tasks and send follow-up communication to your customers.",
-            "title": "Summary statement about proactive ticket app"
-        },
-        "subhead1": {
-            "value": "With the Proactive Tickets app, you can generate Zendesk tickets on behalf of your customers.",
-            "title": "Summary statement about proactive ticket app"
-        },
-        "subhead2": {
-            "value": "Easily create tasks and send follow-up communication to your customers.",
-            "title": "Summary statement about proactive ticket app"
-        },
-        "cta": {
-            "value": "Create a campaign",
-            "title": "Call to action button to create a campaign"
-        },
-        "tab1": {
-            "value": "How it works",
-            "title": "Tab 1 title"
-        },
-        "tab2": {
-            "value": "Still have questions?",
-            "title": "Tab 2 title"
-        },
-        "icon1header": {
-            "value": "Next level of service",
-            "title": "Title for icon 1 on tab 1"
-        },
-        "icon1body": {
-            "value": "Go from reactive support to proactive engagement. Make your customer interactions more strategic and future-thinking.",
-            "title": "Body text for icon 1 on tab 1"
-        },
-        "icon2header": {
-            "value": "Better customer care",
-            "title": "Title for icon 2 on tab 1"
-        },
-        "icon2body": {
-            "value": "Engaging customers with proactive support as soon as problems arise provides them with a better customer experience.",
-            "title": "Body text for icon 2 on tab 1"
-        },
-        "icon3header": {
-            "value": "Seamless support workflows",
-            "title": "Title for icon 3 on tab 1"
-        },
-        "icon3body": {
-            "value": "Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.",
-            "title": "Body text for icon 3 on tab 1"
-        },
-        "question1": {
-            "value": "How will this impact my ticket workflows?",
-            "title": "First FAQ question"
-        },
-        "answer1": {
-            "value": "The Proactive Ticket app will not affect your current ticket workflows. The app simply creates new tickets which will follow the existing workflows you have set up.",
-            "title": "First FAQ answer"
-        },
-        "question2": {
-            "value": "Can I customize my proactive ticket workflow?",
-            "title": "Second FAQ question"
-        },
-        "answer2": {
-            "value": "Yes! Simply create a trigger for your proactive tickets. Each proactive ticket campaign has a unique tag which you can set as one of your trigger conditions.",
-            "title": "Second FAQ answer"
-        },
-        "question3": {
-            "value": "How do I view and report on proactive tickets?",
-            "title": "Third FAQ question"
-        },
-        "answer3": {
-            "value": "The Proactive Tickets app automatically creates a ticket view based on your campaign. You can manage your tickets from that view, as well as create custom reports using Insights.",
-            "title": "Third FAQ answer"
-        },
-        "question4": {
-            "value": "How many proactive tickets can I create?",
-            "title": "Fourth FAQ question"
-        },
-        "answer4": {
-            "value": "We recommend creating no more than 1,000 proactive tickets per campaign. Remember to not create more tickets than your team can reasonably support.",
-            "title": "Fourth FAQ answer"
-        }
-    },
-    "confirmation": {
-        "title": {
-            "value": "Proactive Tickets",
-            "title": "Heading for confirmation page"
-        },
-        "header": {
-            "value": "Measure twice. Cut once.",
-            "title": "Heading 2 for confirmation page"
-        },
-        "copy1": {
-            "value": "You are about to create proactive tickets on behalf of",
-            "title": "Copy 1 for confirmation page"
-        },
-        "copy2": {
-            "value": "customers. They will receive an email notification with the below ticket details.",
-            "title": "Copy 2 for confirmation page"
-        },
-        "subject": {
-          "value":"SUBJECT",
-          "title":"Subject label"
-        },
-        "group_assignee": {
-          "value":"GROUP/ASSIGNEE",
-          "title":"Group/Assignee label"
-        },
-        "tags": {
-          "value":"TAGS",
-          "title":"Tags label"
-        },
-        "type": {
-          "value":"TYPE",
-          "title":"Type label"
-        },
-        "priority": {
-          "value":"PRIORITY",
-          "title":"Priority label"
-        },
-        "description": { 
-          "value":"DESCRIPTION",
-          "title":"Description label"
-        }
-
-    },
-    "done": {
-      "header": {
-        "value": "Congrats! That’s one giant leap for your customer support.",
-        "title": "Done screen header"
-      },
-      "supporting_copy": {
-        "value": "Your customers are going to be grateful for the extra care you’re providing. We’ve also went ahead and created a special ticket view so you can easily manage the proactive tickets.",
-        "title": "Supporting copy for done screen"
-      },
-      "go_to_view": {
-        "value": "Go to ticket view",
-        "title": "Go to ticket view link"
-      }
+    "name": {
+        "value": "Proactive Ticket App",
+        "title": "app name"
     }
+  },
+  "form": {
+    "customer_list": {
+        "value": "Select which customers to target",
+        "title": "Customer list label"
+    },
+    "campaign_name": {
+        "value": "Name your campaign",
+        "title": "Campaign name label"
+    },
+    "proactive_ticket_fields": {
+        "value": "Create your proactive ticket",
+        "title": "Proactive ticket fields"
+    },
+    "subject": {
+        "value": "Subject",
+        "title": "Subject label"
+    },
+    "tags": {
+        "value": "Tags",
+        "title": "Tags label"
+    },
+    "description": {
+        "value": "Description",
+        "title": "Description label"
+    },
+    "previous": {
+        "value": "Previous",
+        "title": "Previous button text"
+    },
+    "next": {
+        "value": "Next",
+        "title": "Next button text"
+    },
+    "save": {
+        "value": "Save",
+        "title": "Save button text"
+    },
+    "send": {
+        "value": "Send",
+        "title": "Send button text"
+    },
+    "priority": {
+        "value": "Priority",
+        "title": "Priority label"
+    },
+    "tickettype": {
+        "value": "Type",
+        "title": "Type label"
+    },
+    "status": {
+        "value": "Status",
+        "title": "Status label"
+    },
+    "groupassignee": {
+        "value": "Group and Assignee",
+        "title": "Group and Assignee label"
+    },
+    "statusnew": {
+        "value": "New",
+        "title": "New"
+    },
+    "defaultsubject": {
+        "value": "Ticket created on your behalf",
+        "title": "Default subject text"
+    },
+    "defaultdescription1": {
+        "value": "Hi there,",
+        "title": "Default description text part 1"
+    },
+    "defaultdescription2": {
+        "value": "This ticket was created on your behalf.",
+        "title": "Default description text part 2"
+    }
+},
+"instructions": {
+    "customer_list": {
+        "value": "Choose an existing customer list. You will be creating a proactive ticket for each of these customers.",
+        "title": "Customer list selection instructions"
+    },
+    "campaign_name": {
+        "value": "Create a unique identifier for this campaign. We’ll automatically tag your ticket with this name so you can report on this campaign.",
+        "title": "Campaign name instructions"
+    },
+    "proactive_ticket_fields": {
+        "value": "Fill in your ticket details. If you need help, check out",
+        "title": "Proactive ticket fields instructions"
+    },
+    "this_user_guide": {
+      "value":"this user guide.",
+      "title":"this user guide."
+    }
+},
+"intro": {
+    "title": {
+        "value": "Proactive Tickets app",
+        "title": "Title of app"
+    },
+    "headline1": {
+        "value": "A better customer experience",
+        "title": "Headline to display under title"
+    },
+    "headline2": {
+        "value": "starts with proactive support",
+        "title": "Headline to display under title"
+    },
+    "headline": {
+        "value": "A better customer experience starts with proactive support",
+        "title": "Headline to display under title"
+    },
+    "subhead": {
+        "value": "With the Proactive Tickets app, you can generate Zendesk tickets on behalf of your customers. Easily create tasks and send follow-up communication to your customers.",
+        "title": "Summary statement about proactive ticket app"
+    },
+    "subhead1": {
+        "value": "With the Proactive Tickets app, you can generate Zendesk tickets on behalf of your customers.",
+        "title": "Summary statement about proactive ticket app"
+    },
+    "subhead2": {
+        "value": "Easily create tasks and send follow-up communication to your customers.",
+        "title": "Summary statement about proactive ticket app"
+    },
+    "cta": {
+        "value": "Create a campaign",
+        "title": "Call to action button to create a campaign"
+    },
+    "tab1": {
+        "value": "How it works",
+        "title": "Tab 1 title"
+    },
+    "tab2": {
+        "value": "Still have questions?",
+        "title": "Tab 2 title"
+    },
+    "icon1header": {
+        "value": "Next level of service",
+        "title": "Title for icon 1 on tab 1"
+    },
+    "icon1body": {
+        "value": "Go from reactive support to proactive engagement. Make your customer interactions more strategic and future-thinking.",
+        "title": "Body text for icon 1 on tab 1"
+    },
+    "icon2header": {
+        "value": "Better customer care",
+        "title": "Title for icon 2 on tab 1"
+    },
+    "icon2body": {
+        "value": "Engaging customers with proactive support as soon as problems arise provides them with a better customer experience.",
+        "title": "Body text for icon 2 on tab 1"
+    },
+    "icon3header": {
+        "value": "Seamless support workflows",
+        "title": "Title for icon 3 on tab 1"
+    },
+    "icon3body": {
+        "value": "Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.",
+        "title": "Body text for icon 3 on tab 1"
+    },
+    "question1": {
+        "value": "How will this impact my ticket workflows?",
+        "title": "First FAQ question"
+    },
+    "answer1": {
+        "value": "The Proactive Ticket app will not affect your current ticket workflows. The app simply creates new tickets which will follow the existing workflows you have set up.",
+        "title": "First FAQ answer"
+    },
+    "question2": {
+        "value": "Can I customize my proactive ticket workflow?",
+        "title": "Second FAQ question"
+    },
+    "answer2": {
+        "value": "Yes! Simply create a trigger for your proactive tickets. Each proactive ticket campaign has a unique tag which you can set as one of your trigger conditions.",
+        "title": "Second FAQ answer"
+    },
+    "question3": {
+        "value": "How do I view and report on proactive tickets?",
+        "title": "Third FAQ question"
+    },
+    "answer3": {
+        "value": "The Proactive Tickets app automatically creates a ticket view based on your campaign. You can manage your tickets from that view, as well as create custom reports using Insights.",
+        "title": "Third FAQ answer"
+    },
+    "question4": {
+        "value": "How many proactive tickets can I create?",
+        "title": "Fourth FAQ question"
+    },
+    "answer4": {
+        "value": "We recommend creating no more than 1,000 proactive tickets per campaign. Remember to not create more tickets than your team can reasonably support.",
+        "title": "Fourth FAQ answer"
+    }
+},
+"confirmation": {
+    "title": {
+        "value": "Proactive Tickets",
+        "title": "Heading for confirmation page"
+    },
+    "header": {
+        "value": "Measure twice. Cut once.",
+        "title": "Heading 2 for confirmation page"
+    },
+    "copy1": {
+        "value": "You are about to create proactive tickets on behalf of",
+        "title": "Copy 1 for confirmation page"
+    },
+    "copy2": {
+        "value": "customers. They will receive an email notification with the below ticket details.",
+        "title": "Copy 2 for confirmation page"
+    },
+    "subject": {
+      "value":"SUBJECT",
+      "title":"Subject label"
+    },
+    "group_assignee": {
+      "value":"GROUP/ASSIGNEE",
+      "title":"Group/Assignee label"
+    },
+    "tags": {
+      "value":"TAGS",
+      "title":"Tags label"
+    },
+    "type": {
+      "value":"TYPE",
+      "title":"Type label"
+    },
+    "priority": {
+      "value":"PRIORITY",
+      "title":"Priority label"
+    },
+    "description": {
+      "value":"DESCRIPTION",
+      "title":"Description label"
+    }
+
+  },
+  "done": {
+    "header": {
+      "value": "Congrats! That’s one giant leap for your customer support.",
+      "title": "Done screen header"
+    },
+    "supporting_copy": {
+      "value": "Your customers are going to be grateful for the extra care you’re providing. We’ve also went ahead and created a special ticket view so you can easily manage the proactive tickets.",
+      "title": "Supporting copy for done screen"
+    },
+    "go_to_view": {
+      "value": "Go to ticket view",
+      "title": "Go to ticket view link"
+    }
+  }
 }
