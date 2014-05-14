@@ -1,5 +1,5 @@
-Confirmation
 <div class="confirmation">
+  <h1>Measure twice. Cut once.</h1>
   <p>
     You are about to create proactive tickets on behalf of <strong>{{recipientCount}} customers</strong>.<br/>
     They will receive an email notification with the below ticket details.
@@ -14,18 +14,21 @@ Confirmation
         <strong>GROUP/ASSIGNEE</strong> {{this.data.ticketData.assignee}}
       </div>
       <div class="data">
-        <strong>TAGS</strong> 
-
+        <strong>TAGS</strong>
         {{#each this.data.ticketData.tags}}
           <span class="token">{{this}}</span>
         {{/each}}
       </div>
-      <div class="data">
-        <strong>TYPE</strong> {{this.data.ticketData.type}}
-      </div>
-      <div class="data">
-        <strong>PRIORITY</strong> {{this.data.ticketData.priority}}
-      </div>
+      {{#if this.data.ticketData.type}}
+        <div class="data">
+          <strong>TYPE</strong> {{this.data.ticketData.type}}
+        </div>
+      {{/if}}
+      {{#if this.data.ticketData.priority}}
+        <div class="data">
+          <strong>PRIORITY</strong> {{this.data.ticketData.priority}}
+        </div>
+      {{/if}}
     </div>
     <div class="column">
       <div class="data">
