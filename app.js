@@ -201,6 +201,10 @@
             var activeLists = this.findActiveViews(customerListData.user_views);
 
             self.switchTo('main', {user_views:activeLists, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive});
+            self._renderSelect('status', statusOptions, this.$('.statuses'));
+            self._renderSelect('type', typeOptions, this.$('.types'));
+            self._renderSelect('priority', priorityOptions, this.$('.priorities'));
+            // self._renderComboSelect('assignee', memberships, this.$('.assignees'));
           });
         });
       });
@@ -305,7 +309,7 @@
     },
 
     getField: function(name) {
-      var cssSelector = '.' + name,
+      var cssSelector = '#' + name,
           value = this.$(cssSelector).val();
 
       return value;
@@ -389,7 +393,45 @@
       this.$('#how_it_works').hide();
       this.$('#still_questions').show();
       this.$('.still_questions').addClass('selected');
+    },
+
+    _renderSelect: function(name, options, $el) {
+      if (!$el.length) {
+        return;
+      }
+
+      options.unshift({name: '-', value: ''});
+
+      $el.html(this.renderTemplate('select', {
+        options: options,
+        name: name
+      }));
+      $el.find('select').zdSelectMenu();
+      if (this.fields[name]) {
+        $el.find('select').zdSelectMenu('setValue', this.fields[name]);
+      }
+    },
+
+    _renderComboSelect: function(name, options, $el) {
+      if (!$el.length) {
+        return;
+      }
+
+      options.unshift({name: '-', value: ''});
+
+      $el.html(this.renderTemplate('select', {
+        options: options,
+        name: name
+      }));
+
+      $el.find('select').zdComboSelectMenu({
+        data: options
+      });
+      if (this.fields[name]) {
+        $el.find('select').zdComboSelectMenu('setValue', this.fields[name]);
+      }
     }
+
 
   };
 

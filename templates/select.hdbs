@@ -1,0 +1,5 @@
+<select name="{{name}}" id="{{name}}" data-zd-type="select_menu">
+  {{#options}}
+    <option data-preview-url="{{previewUrl}}" value="{{value}}">{{name}}</option>
+  {{/options}}
+</select>

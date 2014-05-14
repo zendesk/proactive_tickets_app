@@ -5,7 +5,7 @@
       <p class="instructions">{{t "instructions.customer_list"}}</p>
     </div>
     <div class="question-field">
-      <select name="customer-list" class="customer-list">
+      <select name="customer-list" id="customer-list">
         {{#each user_views}}
           <option value="{{id}}">{{title}}</option>
         {{/each}}
@@ -20,7 +20,7 @@
       <p class="instructions">{{t "instructions.campaign_name"}}</p>
     </div>
     <div class="question-field">
-      <input value="{{campaignName}}" type="text" name="name" class="campaign-name" />
+      <input value="{{campaignName}}" type="text" name="name" id="campaign-name" />
     </div>
   </div>
   <div class="question ticket-fields">
@@ -54,37 +54,22 @@
     {{#if hasPriority}}
       <div class="question-field">
         <label>{{t "form.priority"}}</label>
-        <select class="priority" name="priority">
-          <option value="">-</option>
-          {{#each priorities}}
-            <option value="{{value}}">{{name}}</option>
-          {{/each}}
-        </select>
+        <div class="priorities"></div>
       </div>
     {{/if}}
     {{#if hasType}}
       <div class="question-field">
         <label>{{t "form.tickettype"}}</label>
-        <select class="type" name="type">
-          <option value="">-</option>
-          {{#each types}}
-            <option value="{{value}}">{{name}}</option>
-          {{/each}}
-        </select>
+        <div class="types"></div>
       </div>
     {{/if}}
     <div class="question-field">
       <label>{{t "form.status"}}</label>
-      <select class="status" name="status">
-        <option value="new">{{t "form.statusnew"}}</option>
-        {{#each statuses}}
-          <option value="{{value}}">{{name}}</option>
-        {{/each}}
-      </select>
+      <div class="statuses"></div>
     </div>
     <div class="question-field description-field">
       <label>{{t "form.description"}}</label>
-      <textarea name="description" class="description" rows="12">{{t "form.defaultdescription1"}}&#13;&#10;&#13;{{t "form.defaultdescription2"}}</textarea>
+      <textarea name="description" id="description" rows="12">{{t "form.defaultdescription1"}}&#13;&#10;&#13;{{t "form.defaultdescription2"}}</textarea>
     </div>
     <div style="clear: both;"></div>
   </div>
