@@ -4,7 +4,8 @@
     {{t "confirmation.copy1"}} <strong>{{recipientCount}}</strong> {{t "confirmation.copy2"}}
   </p>
 
-  <div class="progress"></div>
+  <div class="progress-placeholder">
+  </div>
 
   <div class="data-container">
     <div class="column">

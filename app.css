@@ -1,5 +1,11 @@
 .progress-bar {
-  background-color: red;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  width: 0;
+  background-color: #78a300;
 }
 
 footer {

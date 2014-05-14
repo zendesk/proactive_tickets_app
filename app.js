@@ -296,7 +296,7 @@
     updateProgressStatus: function() {
       this.createdTickets += 1;
       var percentage = (this.createdTickets/this.submittedTickets) * 100;
-      this.$('.progress').html(this.renderTemplate('progress', { percentage: percentage}));
+      this.$('.progress-placeholder').html(this.renderTemplate('progress', { percentage: percentage }));
 
       if (percentage === 100) {
         this.currentView = 0;
