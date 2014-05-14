@@ -17,6 +17,7 @@
       <h3>
         {{t "form.campaign_name"}}*
       </h3>
+      <p class="instructions">{{t "instructions.campaign_name"}}</p>
     </div>
     <div class="question-field">
       <input value="{{campaignName}}" type="text" name="name" class="campaign-name" />
