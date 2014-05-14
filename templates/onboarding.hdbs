@@ -1,14 +1,9 @@
 
 <div class="confirmation">
-<<<<<<< HEAD
 <h1></h1>
 <p><b>Proactive Tickets <p></b>
-  <h1> <center>Engage your customer community</h1><br></center>
-  <br><center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</center> </p>
-=======
   <center><h1>Engage your customer community</h1></center>
-  <center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</p></center>
->>>>>>> FETCH_HEAD
+  <center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</p></center> 
   
   <button class="btn btn-inverse next">Create Your Campaign</button>
 
