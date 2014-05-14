@@ -1,6 +1,7 @@
 
 <h1> <center>Engage your customer community</h1><br></center>
 <br><center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</center> </p>
+<<<<<<< HEAD
 <div id="three_points">
   <ul class="category-list">
     <li class="first_child">
@@ -16,6 +17,34 @@
     </li>
   </ul>
 </div>
+=======
+<ul class="category-list">
+  <li class="first_child">
+    <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+    Know your customers
+Gather customer data for more personal and informed conversations 
+  </li>
+   
+  <li class="second_child">
+    <img src="{{assetURL "seamless.png"}}" alt="logo" />
+    Engage beyond the ticket
+Proactively reach out to customers to get ahead of issues
+  </li>
+
+  <li class="third_child">
+
+  <img src="{{assetURL "smooth_ops.png"}}" alt="logo" />
+  Build customer loyalty
+Measure and improve the health of your customer relationships 
+
+   
+  </li>
+
+</ul>
+
+<div class="buttonfooter">
+
+>>>>>>> FETCH_HEAD
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percentage}}%;">
     <span class="sr-only">{{percentage}}% Complete</span>
