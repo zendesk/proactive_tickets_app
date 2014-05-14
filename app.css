@@ -3,7 +3,12 @@
 }
 
 .buttonfooter {
-  
+  clear: both;
+}
+
+.data-container {
+  width: 800px;
+  margin: 0 auto;
 }
 
 
@@ -22,4 +27,64 @@
 
 .error {
   border: 1px solid red;
+}
+
+.column {
+  width: 400px;
+  float: left;
+}
+
+.confirmation p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+.data {
+  width: 400px;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.data strong {
+  font-size: 11px;
+  color: #888;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.data .token {
+  position: relative;
+  display: inline-block;
+  margin: 0 3px 3px 0;
+  padding: 3px 6px 4px 6px;
+  background: #fafafa;
+  font-size: 11px;
+  line-height: 13px;
+  color: #333;
+  min-height: 13px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  word-break: break-all;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+}
+
+.confirmation {
+  overflow: auto;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 20px;
+  border-radius: 10px;
 }

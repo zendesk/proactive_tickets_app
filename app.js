@@ -37,10 +37,11 @@
           break;
         case 2:
           this.removeFieldHighlights();
+
           if (!this.isFormValid()) {
             this.$('.missing-fields-note').show();
             this.highlightRequiredFields();
-            this.currentView = 2;
+            this.currentView = 1;
           } else {
             this.removeFieldHighlights();
             this.$('.missing-fields-note').hide();
@@ -48,7 +49,10 @@
             this.switchTo('loading');
             this.getRecipients(listid).then(function(data) {
               self.recipients = data.rows;
-              self.switchTo('confirmation', { recipientCount: self.recipients.length });
+              self.switchTo('confirmation', {
+                recipientCount: self.recipients.length,
+                data: this.data
+              });
             });
             this.disableNextButton(false);
           }
@@ -200,7 +204,7 @@
 
     getTagsArray: function() {
       var tags = this.getField('tags') + ' ' + this.getCampaignNameTag();
-      return tags.split(' ');
+      return _.compact(tags.split(' '));
     },
 
     getCampaignNameTag: function() {

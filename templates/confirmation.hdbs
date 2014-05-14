@@ -1,9 +1,42 @@
 Confirmation
+<div class="confirmation">
+  <p>
+    You are about to create proactive tickets on behalf of <strong>{{recipientCount}} customers</strong>.<br/>
+    They will receive an email notification with the below ticket details.
+  </p>
 
-<div class="well">
-  You are about to send to <strong>{{recipientCount}} recipient(s).</strong>
+  <div class="data-container">
+    <div class="column">
+      <div class="data">
+        <strong>SUBJECT</strong> {{this.data.ticketData.subject}}
+      </div>
+      <div class="data">
+        <strong>GROUP/ASSIGNEE</strong> {{this.data.ticketData.assignee}}
+      </div>
+      <div class="data">
+        <strong>TAGS</strong> 
+
+        {{#each this.data.ticketData.tags}}
+          <span class="token">{{this}}</span>
+        {{/each}}
+      </div>
+      <div class="data">
+        <strong>TYPE</strong> {{this.data.ticketData.type}}
+      </div>
+      <div class="data">
+        <strong>PRIORITY</strong> {{this.data.ticketData.priority}}
+      </div>
+    </div>
+    <div class="column">
+      <div class="data">
+        <strong>DESCRIPTION</strong> {{this.data.ticketData.comment.body}}
+      </div>
+    </div>
+  </div>
+  <div class="buttonfooter">
+    <button class="btn previous">{{t "form.previous"}}</button>
+    <button class="btn btn-inverse save">{{t "form.send"}}</button>
+  </div>
 </div>
-<div class="buttonfooter">
-  <button class="btn previous">{{t "form.previous"}}</button>
-  <button class="btn btn-inverse save">{{t "form.send"}}</button>
-</div>
+
+
