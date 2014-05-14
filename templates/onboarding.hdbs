@@ -10,12 +10,12 @@
       </li>
        
       <li class="second_child">
-        <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+        <img src="{{assetURL "seamless.png"}}" alt="logo" />
         <p>Better customer support</p>
       </li>
 
       <li class="third_child">
-        <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+        <img src="{{assetURL "smooth_ops.png"}}" alt="logo" />
         <p>Better customer support</p>
       </li>
     </ul>
