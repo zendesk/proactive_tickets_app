@@ -19,12 +19,14 @@
 >>>>>>> FETCH_HEAD
 </ul>
 
+<div class="buttonfooter">
+
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percentage}}%;">
     <span class="sr-only">{{percentage}}% Complete</span>
   </div>
 </div>
 
-<div class="buttonfooter">
+
   <button class="btn btn-inverse next">{{t "form.next"}}</button>
 </div>
