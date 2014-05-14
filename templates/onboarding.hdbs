@@ -3,15 +3,19 @@
 <br><center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</center> </p>
 <ul class="category-list">
   <li class="first_child">
-   <img src="{{assetURL "better_cx.png"}}" alt="logo" />
-
+    <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+  </li>
    
   <li class="second_child">
-  <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+    <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+  </li>
 
   <li class="third_child">
   <img src="{{assetURL "better_cx.png"}}" alt="logo" />
 </u
+    <img src="{{assetURL "better_cx.png"}}" alt="logo" />
+  </li>
+</ul>
 
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percentage}}%;">
