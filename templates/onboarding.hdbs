@@ -1,9 +1,14 @@
 
 <div class="confirmation">
+<<<<<<< HEAD
 <h1></h1>
 <p><b>Proactive Tickets <p></b>
   <h1> <center>Engage your customer community</h1><br></center>
   <br><center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</center> </p>
+=======
+  <center><h1>Engage your customer community</h1></center>
+  <center><p>Zendesk helps you build relationships that are meaningful, personal, and productive</p></center>
+>>>>>>> FETCH_HEAD
   
   <button class="btn btn-inverse next">Create Your Campaign</button>
 
@@ -49,30 +54,23 @@
 
     </div>
 
-    <div id="questions">
-      <div class="support_point left">
-        <p>How will this impact my ticket workflows?</p>
-        <p>The Proactive Ticket app will not affect your current ticket workflows. The app simply creates new tickets which will follow the existing workflows you have set up.</p>
-      </div>
-      <div class="support_point left">
-        <p>Can I customize my proactive ticket workflow?</p>
-        <p>Yes! Simply create a trigger for your proactive tickets. Each proactive ticket campaign has a unique tag which you can set as one of your trigger conditions.</p>
-      </div>
-      <div class="support_point right">
-        <p>How do I view and report on proactive tickets?</p>
-        <p>The Proactive Tickets app automatically creates a ticket view based on your campaign. You can manage your tickets from that view, as well as create custom reports using Insights.</p>
-      </div>
-      <div class="support_point right">
-        <p>How many proactive tickets can I create?</p>
-        <p>We recommend creating no more than 1,000 proactive tickets per campaign. Remember to not create more tickets than your team can reasonably support.</p>
-      </div>
+    <div class="support_point">
+      <span class="bold">How will this impact my ticket workflows?</span><br />
+      <span>The Proactive Ticket app will not affect your current ticket workflows. The app simply creates new tickets which will follow the existing workflows you have set up.</span>
+    </div>
+    <div class="support_point">
+      <span class="bold">Can I customize my proactive ticket workflow?</span><br />
+      <span>Yes! Simply create a trigger for your proactive tickets. Each proactive ticket campaign has a unique tag which you can set as one of your trigger conditions.</span>
+    </div>
+    <div class="support_point">
+      <span class="bold">How do I view and report on proactive tickets?</span><br />
+      <span>The Proactive Tickets app automatically creates a ticket view based on your campaign. You can manage your tickets from that view, as well as create custom reports using Insights.</span>
+    </div>
+    <div class="support_point">
+      <span class="bold">How many proactive tickets can I create?</span><br />
+      <span>We recommend creating no more than 1,000 proactive tickets per campaign. Remember to not create more tickets than your team can reasonably support.</span>
     </div>
 
   </div>
-
- 
-
-
-  
 
 </div>

@@ -146,6 +146,7 @@ footer {
 }
 
 #questions p {
+#questions span {
 	padding: 0 4%;
 	font-size: 12px;	
 }
@@ -159,7 +160,10 @@ footer {
 }
 
 .support_point .right {
+	font-size: 12px;
+	text-align: justify;
 	float: left;
+	margin: 1% 7%;
 }
 
 .category-list {
