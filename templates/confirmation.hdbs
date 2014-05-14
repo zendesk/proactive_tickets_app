@@ -1,8 +1,7 @@
 <div class="confirmation">
-  <h1>Measure twice. Cut once.</h1>
+  <h1>{{t "confirmation.header"}}</h1>
   <p>
-    You are about to create proactive tickets on behalf of <strong>{{recipientCount}} customers</strong>.<br/>
-    They will receive an email notification with the below ticket details.
+    {{t "confirmation.copy1"}} <strong>{{recipientCount}}</strong> {{t "confirmation.copy2"}}
   </p>
 
   <div class="data-container">
