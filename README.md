@@ -8,6 +8,8 @@ https://support.zendesk.com/entries/62082233
 
 #### Contributors
 
+* Erin Boyle
+* Elyse Kanagaratnam
 * Jesper Christiansen
 * Kevin Vanscoder
 
