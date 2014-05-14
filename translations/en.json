@@ -50,8 +50,12 @@
             "title": "Customer list label"
         },
         "campaign_name": {
-            "value": "Campaign Name",
+            "value": "2) Name your campaign",
             "title": "Campaign name label"
+        },
+        "proactive_ticket_fields": {
+            "value": "3) Create your proactive ticket",
+            "title": "Proactive ticket fields"
         },
         "subject": {
             "value": "Subject",
@@ -118,6 +122,14 @@
         "customer_list": {
             "value": "Choose an existing customer list or create a new list. You will be creating a proactive ticket for each of these customers.",
             "title": "Customer list selection instructions"
+        },
+        "campaign_name": {
+            "value": "Create a unique identifier for this campaign. We’ll automatically tag your ticket with this name so you can report on this campaign.",
+            "title": "Campaign name instructions"
+        },
+        "proactive_ticket_fields": {
+            "value": "Fill in your ticket details. If you need help, check out this user guide.",
+            "title": "Proactive ticket fields instructions"
         }
     },
     "intro": {
