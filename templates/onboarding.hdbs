@@ -31,15 +31,15 @@
     <div id="three_points">
       <ul>
         <li>
-          <span>Next level of service</span><br />
+          <span class="bold">Next level of service</span><br />
           <span>Go from reactive support to proactive engagement. Make your customer interactions more strategic and future-thinking.</span>
         </li>
         <li>
-          <span>Better customer care</span><br />
+          <span class="bold">Better customer care</span><br />
           <span>Engaging customers with proactive support as soon as problems arise provides them with a better customer experience.</span>
         </li>
         <li>
-          <span>Seamless support workflows</span><br />
+          <span class="bold">Seamless support workflows</span><br />
           <span>Creating proactive tickets provide your support team a more organized way to take charge of your customer conversations.</span>
         </li>
     </div>
