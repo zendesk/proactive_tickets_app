@@ -24,7 +24,7 @@
     <label for="groupAssignee">
       {{t "form.groupassignee"}}
     </label>
-    <select class="assignee" name="assignee">
+    <select class="assignee" name="assignee" id="assignee">
       {{#each groupAssignees}}
         <optgroup label={{group}}>
           <option value="group-{{id}}">{{group}}</option>

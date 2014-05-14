@@ -224,14 +224,20 @@
       var groupassignee = this.getField('assignee');
       var group = '';
       var assignee = '';
+      var groupname = '';
+      var assigneename = '';
       groupassignee = groupassignee.split('-');
+
 
       if(groupassignee[0] == "group"){
         group = groupassignee[1];
+        groupname = this.$('#assignee').find(":selected").text();
       }
       else if(groupassignee[0] == "agent"){
         group = groupassignee[2];
         assignee = groupassignee[1];
+        assigneename = this.$('#assignee').find(":selected").text();
+        groupname = this.$('#assignee :selected').parent().attr('label');
       }
 
       /* JSON array to create tickets */
@@ -239,6 +245,8 @@
       this.data = {
         campaignTag: this.getCampaignNameTag(),
         campaignName: this.getField('campaign-name'),
+        groupname: groupname,
+        assigneename: assigneename,
         ticketData: {
           subject: subject,
           comment: {
