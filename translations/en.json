@@ -1,125 +1,205 @@
 {
-  "app": {
-    "package": "app_name",
-    "description": {
-      "value": "Play the famous zen tunes in your help desk.",
-      "title": "app description"
+    "app": {
+        "package": "app_name",
+        "description": {
+            "value": "Play the famous zen tunes in your help desk.",
+            "title": "app description"
+        },
+        "name": {
+            "value": "Proactive Ticket App",
+            "title": "app name"
+        }
+    },
+    "loading": {
+        "value": "Welcome to this Sample App",
+        "title": "loading placeholder"
+    },
+    "fetch": {
+        "done": {
+            "value": "Good",
+            "title": "fetch success"
+        },
+        "fail": {
+            "value": "failed to fecth information from the server",
+            "title": "fetch failure"
+        }
+    },
+    "id": {
+        "value": "ID",
+        "title": "user id"
+    },
+    "email": {
+        "value": "Email",
+        "title": "user email"
     },
     "name": {
-      "value": "Proactive Ticket App",
-      "title": "app name"
+        "value": "Name",
+        "title": "user name"
+    },
+    "role": {
+        "value": "Role",
+        "title": "user role"
+    },
+    "groups": {
+        "value": "Groups",
+        "title": "user groups"
+    },
+    "form": {
+        "customer_list": {
+            "value": "1) Select which customers to target",
+            "title": "Customer list label"
+        },
+        "campaign_name": {
+            "value": "Campaign Name",
+            "title": "Campaign name label"
+        },
+        "subject": {
+            "value": "Subject",
+            "title": "Subject label"
+        },
+        "tags": {
+            "value": "Tags",
+            "title": "Tags label"
+        },
+        "description": {
+            "value": "Description",
+            "title": "Description label"
+        },
+        "previous": {
+            "value": "Previous",
+            "title": "Previous button text"
+        },
+        "next": {
+            "value": "Next",
+            "title": "Next button text"
+        },
+        "save": {
+            "value": "Save",
+            "title": "Save button text"
+        },
+        "send": {
+            "value": "Send",
+            "title": "Send button text"
+        },
+        "priority": {
+            "value": "Priority",
+            "title": "Priority label"
+        },
+        "tickettype": {
+            "value": "Type",
+            "title": "Type label"
+        },
+        "status": {
+            "value": "Status",
+            "title": "Status label"
+        },
+        "groupassignee": {
+            "value": "Group and Assignee",
+            "title": "Group and Assignee label"
+        },
+        "statusnew": {
+            "value": "New",
+            "title": "New"
+        },
+        "defaultsubject": {
+            "value": "Ticket created on your behalf",
+            "title": "Default subject text"
+        },
+        "defaultdescription1": {
+            "value": "Hi there,",
+            "title": "Default description text part 1"
+        },
+        "defaultdescription2": {
+            "value": "This ticket was created on your behalf.",
+            "title": "Default description text part 2"
+        }
+    },
+    "instructions": {
+        "customer_list": {
+            "value": "Choose an existing customer list or create a new list. You will be creating a proactive ticket for each of these customers.",
+            "title": "Customer list selection instructions"
+        }
+    },
+    "intro": {
+        "title": {
+            "value": "Proactive Tickets app",
+            "title": "Title of app"
+        },
+        "headline": {
+            "value": "A better customer experience starts with proactive support",
+            "title": "Headline to display under title"
+        },
+        "subhead": {
+            "value": "With the Proactive Tickets app, you can generate Zendesk tickets on behalf of your customers. Easily create tasks and send follow-up communication to your customers.",
+            "title": "Summary statement about proactive ticket app"
+        },
+        "cta": {
+            "value": "Create a campaign",
+            "title": "Call to action button to create a campaign"
+        },
+        "tab1": {
+            "value": "How it works",
+            "title": "Tab 1 title"
+        },
+        "tab2": {
+            "value": "Still have questions?",
+            "title": "Tab 2 title"
+        },
+        "icon1header": {
+            "value": "Seamless agent workflows",
+            "title": "Title for icon 1 on tab 1"
+        },
+        "icon1body": {
+            "value": "Proactive tickets prevent problems from getting out of hand and provides a more organized way to manage your customer conversations.",
+            "title": "Body text for icon 1 on tab 1"
+        },
+        "icon2header": {
+            "value": "A better customer experience",
+            "title": "Title for icon 2 on tab 1"
+        },
+        "icon2body": {
+            "value": "Engaging customers with proactive support as soon as problems arise provides them with peace of mind and a better customer experience.",
+            "title": "Body text for icon 2 on tab 1"
+        },
+        "icon3header": {
+            "value": "Smooth support operations",
+            "title": "Title for icon 3 on tab 1"
+        },
+        "icon3body": {
+            "value": "Getting ahead of support issues keeps workload under control, so you can ensure faster resolution times and higher customer satisfaction.",
+            "title": "Body text for icon 3 on tab 1"
+        },
+        "question1": {
+            "value": "How will this impact my ticket workflows?",
+            "title": "First FAQ question"
+        },
+        "answer1": {
+            "value": "The Proactive Ticket app will not affect your current ticket workflows. The app simply creates new tickets which will follow the existing workflows you have set up.",
+            "title": "First FAQ answer"
+        },
+        "question2": {
+            "value": "Can I customize my proactive ticket workflow?",
+            "title": "Second FAQ question"
+        },
+        "answer2": {
+            "value": "Yes! Simply create a trigger for your proactive tickets. Each proactive ticket campaign has a unique tag which you can set as one of your trigger conditions.",
+            "title": "Second FAQ answer"
+        },
+        "question3": {
+            "value": "How do I view and report on proactive tickets?",
+            "title": "Third FAQ question"
+        },
+        "answer3": {
+            "value": "The Proactive Tickets app automatically creates a ticket view based on your campaign. You can manage your tickets from that view, as well as create custom reports using Insights.",
+            "title": "Third FAQ answer"
+        },
+        "question4": {
+            "value": "",
+            "title": "Fourth FAQ question"
+        },
+        "answer4": {
+            "value": "",
+            "title": "Fourth FAQ answer"
+        }
     }
-  },
-
-  "loading": {
-    "value": "Welcome to this Sample App",
-    "title": "loading placeholder"
-  },
-
-  "fetch": {
-    "done": {
-      "value": "Good",
-      "title": "fetch success"
-    },
-    "fail": {
-      "value": "failed to fecth information from the server",
-      "title": "fetch failure"
-    }
-  },
-
-  "id": {
-    "value": "ID",
-    "title": "user id"
-  },
-
-  "email": {
-    "value": "Email",
-    "title": "user email"
-  },
-
-  "name": {
-    "value": "Name",
-    "title": "user name"
-  },
-
-  "role": {
-    "value": "Role",
-    "title": "user role"
-  },
-
-  "groups": {
-    "value": "Groups",
-    "title": "user groups"
-  },
-
-  "form": {
-    "customer_list": {
-      "value": "Customer List",
-      "title": "Customer list label"
-    },
-    "campaign_name": {
-      "value": "Campaign Name",
-      "title": "Campaign name label"
-    },
-    "subject": {
-      "value": "Subject",
-      "title": "Subject label"
-    },
-    "tags": {
-      "value": "Tags",
-      "title": "Tags label"
-    },
-    "description": {
-      "value": "Description",
-      "title": "Description label"
-    },
-    "previous": {
-      "value": "Previous",
-      "title": "Previous button text"
-    },
-    "next": {
-      "value": "Next",
-      "title": "Next button text"
-    },
-    "save": {
-      "value": "Save",
-      "title": "Save button text"
-    },
-    "send": {
-      "value": "Send",
-      "title": "Send button text"
-    },
-    "priority": {
-      "value": "Priority",
-      "title": "Priority label"
-    },
-    "tickettype": {
-      "value": "Type",
-      "title": "Type label"
-    },
-    "status": {
-      "value": "Status",
-      "title": "Status label"
-    },
-    "groupassignee": {
-      "value": "Group and Assignee",
-      "title": "Group and Assignee label"
-    },
-    "statusnew": {
-      "value": "New",
-      "title": "New"
-    },
-    "defaultsubject": {
-      "value": "Ticket created on your behalf",
-      "title": "Default subject text"
-    },
-    "defaultdescription1": {
-      "value": "Hi there,",
-      "title": "Default description text part 1"
-    },
-    "defaultdescription2": {
-      "value": "This ticket was created on your behalf.",
-      "title": "Default description text part 2"
-    }
-  }
 }

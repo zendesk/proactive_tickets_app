@@ -1,6 +1,7 @@
 <div class="property_box">
   <div class="form_field">
     <label for="customer-list">{{t "form.customer_list"}}*</label>
+    <p class="instructions">{{t "instructions.customer_list"}}</p>
     <select name="customer-list" class="customer-list">
       {{#each user_views}}
         <option value="{{id}}">{{title}}</option>
