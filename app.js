@@ -185,7 +185,6 @@
               }
               else if(fieldsData.ticket_fields[i].type == "status"){
                 statusOptions = fieldsData.ticket_fields[i].system_field_options;
-                statusOptions.unshift({ name: this.I18n.t('form.statusnew'), value: 'new' });
               }
             }
 
@@ -202,7 +201,7 @@
             var activeLists = this.findActiveViews(customerListData.user_views);
 
             self.switchTo('main', {user_views:activeLists, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive});
-            self._renderSelect('status', statusOptions, this.$('.statuses'));
+            self._renderSelect('status', statusOptions, this.$('.statuses'), { name: this.I18n.t('form.statusnew'), value: 'new' });
             self._renderSelect('type', typeOptions, this.$('.types'));
             self._renderSelect('priority', priorityOptions, this.$('.priorities'));
             // self._renderComboSelect('assignee', memberships, this.$('.assignees'));
@@ -396,12 +395,16 @@
       this.$('.still_questions').addClass('selected');
     },
 
-    _renderSelect: function(name, options, $el) {
+    _renderSelect: function(name, options, $el, defaultValue) {
       if (!$el.length) {
         return;
       }
 
-      options.unshift({name: '-', value: ''});
+      if (defaultValue !== undefined) {
+        options.unshift(defaultValue);
+      } else {
+        options.unshift({name: '-', value: ''});
+      }
 
       $el.html(this.renderTemplate('select', {
         options: options,
