@@ -145,7 +145,6 @@ footer {
 	font-weight: bold;
 }
 
-#questions p {
 #questions span {
 	padding: 0 4%;
 	font-size: 12px;	
@@ -153,13 +152,6 @@ footer {
 
 .support_point {
 	width: 340px;
-}
-
-.support_point .left {
-	float: left;
-}
-
-.support_point .right {
 	font-size: 12px;
 	text-align: justify;
 	float: left;
