@@ -18,7 +18,6 @@
       'pane.activated': 'goToTemplate',
       'click .save':'saveClicked',
       'createTicket.done': 'updateProgressStatus',
-      'change,keyup,input': 'valueChanged',
       'click .previous': 'goToPrevious',
       'click .next': 'goToNext'
     },
@@ -37,13 +36,22 @@
           this.getData();
           break;
         case 2:
-          this.setData();
-          this.switchTo('loading');
-          this.getRecipients(listid).then(function(data) {
-            self.recipients = data.rows;
-            self.switchTo('confirmation', { recipientCount: self.recipients.length });
-          });
-          this.disableNextButton(false);
+          this.removeFieldHighlights();
+          if (!this.isFormValid()) {
+            this.$('.missing-fields-note').show();
+            this.highlightRequiredFields();
+            this.currentView = 2;
+          } else {
+            this.removeFieldHighlights();
+            this.$('.missing-fields-note').hide();
+            this.setData();
+            this.switchTo('loading');
+            this.getRecipients(listid).then(function(data) {
+              self.recipients = data.rows;
+              self.switchTo('confirmation', { recipientCount: self.recipients.length });
+            });
+            this.disableNextButton(false);
+          }
           break;
       }
     },
@@ -68,17 +76,26 @@
       this.goToTemplate();
     },
 
-    isFormValid: function() {
-      var fields = _.filter(this.requiredFields, function(fieldName) {
+    missingFields: function() {
+      return _.filter(this.requiredFields, function(fieldName) {
         return this.getField(fieldName) === '';
       }.bind(this));
-
-      return fields.length === 0;
     },
 
-    valueChanged: _.debounce(function(e) {
-      this.disableNextButton(!this.isFormValid());
-    }, 400),
+    removeFieldHighlights: function() {
+      this.$('.error').removeClass('error');
+    },
+
+    highlightRequiredFields: function() {
+      var missingRequiredFields = this.missingFields();
+      missingRequiredFields.forEach(function(fieldName) {
+        this.$('.' + fieldName).addClass('error');
+      });
+    },
+
+    isFormValid: function() {
+      return this.missingFields().length === 0;
+    },
 
     disableNextButton: function(disabled) {
       this.$('.next').attr('disabled', disabled);
@@ -176,9 +193,6 @@
             });
 
             self.switchTo('main', {user_views:customerListData.user_views, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive});
-            self.disableSaveButton(true);
-
-
           });
         });
       });
