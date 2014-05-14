@@ -35,18 +35,10 @@
 }
 
 .confirmation p {
-  margin-top: 20px;
   margin-bottom: 30px;
   font-size: 18px;
+  font-weight: 300;
   line-height: 1.2em;
-}
-
-.confirmation .btn-inverse {
-  background-color: #F4A400;
-  background-image: none;
-  border: none;
-  text-shadow: none;
-  padding: 5px 20px;
 }
 
 .data {
@@ -97,12 +89,17 @@
   border-radius: 10px;
 }
 
+#three_points {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .category-list {
-	position:relative;
-	display: block;
-	margin-left:100px;
+	text-align: center;
+	margin: 0px;
 }
 
 .category-list li {
-	float: left;
+	display: inline;
 }
