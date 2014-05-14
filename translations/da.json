@@ -94,8 +94,12 @@
             "title": "Campaign name instructions"
         },
         "proactive_ticket_fields": {
-            "value": "Udfyld dine ticket detaljer. Har du brug for hjælp, check denne guide.",
+            "value": "Udfyld dine ticket detaljer. Har du brug for hjælp,",
             "title": "Proactive ticket fields instructions"
+        },
+        "this_user_guide": {
+          "value":"check denne guide.",
+          "title":"this user guide."
         }
     },
     "intro": {

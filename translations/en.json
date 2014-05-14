@@ -94,8 +94,12 @@
             "title": "Campaign name instructions"
         },
         "proactive_ticket_fields": {
-            "value": "Fill in your ticket details. If you need help, check out this user guide.",
+            "value": "Fill in your ticket details. If you need help, check out",
             "title": "Proactive ticket fields instructions"
+        },
+        "this_user_guide": {
+          "value":"this user guide.",
+          "title":"this user guide."
         }
     },
     "intro": {

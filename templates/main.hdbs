@@ -25,9 +25,9 @@
   <div class="question ticket-fields">
     <div class="question-label">
       <h3>
-        {{t "form.proactive_ticket_fields"}}
-      </h3>
-      <p class="instructions">{{t "instructions.proactive_ticket_fields"}}</p>
+        {{t "form.proactive_ticket_fields"}}      </h3>
+      <p class="instructions">{{t "instructions.proactive_ticket_fields"}} <a href="https://support.zendesk.com/entries/62082233" target="_blank">{{t "instructions.this_user_guide"}}</a>
+</p>
     </div>
     <div class="question-field">
       <label>{{t "form.subject"}}</label>
