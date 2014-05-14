@@ -213,5 +213,23 @@
             "value": "",
             "title": "Fourth FAQ answer"
         }
+    },
+    "confirmation": {
+        "title": {
+            "value": "Proactive Tickets",
+            "title": "Heading for confirmation page"
+        },
+        "header": {
+            "value": "Measure twice. Cut once.",
+            "title": "Heading 2 for confirmation page"
+        },
+        "copy1": {
+            "value": "You are about to create proactive tickets on behalf of",
+            "title": "Copy 1 for confirmation page"
+        },
+        "copy2": {
+            "value": "customers. They will receive an email notification with the below ticket details.",
+            "title": "Copy 2 for confirmation page"
+        }
     }
 }
