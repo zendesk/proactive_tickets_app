@@ -231,5 +231,19 @@
             "value": "customers. They will receive an email notification with the below ticket details.",
             "title": "Copy 2 for confirmation page"
         }
+    },
+    "done": {
+      "header": {
+        "value": "Congrats! That’s one giant leap for your customer support.",
+        "title": "Done screen header"
+      },
+      "supporting_copy": {
+        "value": "Your customers are going to be grateful for the extra care you’re providing. We’ve also went ahead and created a special ticket view so you can easily manage the proactive tickets.",
+        "title": "Supporting copy for done screen"
+      },
+      "go_to_view": {
+        "value": "Go to ticket view",
+        "title": "Go to ticket view link"
+      }
     }
 }

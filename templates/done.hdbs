@@ -1,0 +1,14 @@
+<div class="confirmation">
+  <h1>{{t "done.header"}}</h1>
+
+  <div class="done-icon">
+  </div>
+
+  <p>
+    {{t "done.supporting_copy"}}
+  </p>
+
+  <a href="#/filters/{{viewId}}">
+    {{t "done.go_to_view"}}
+  </a>
+</div>

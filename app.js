@@ -297,6 +297,11 @@
       this.createdTickets += 1;
       var percentage = (this.createdTickets/this.submittedTickets) * 100;
       this.$('.progress').html(this.renderTemplate('progress', { percentage: percentage}));
+
+      if (percentage === 100) {
+        this.currentView = 0;
+        this.switchTo('done', { viewId: this.viewId });
+      }
     },
 
     getField: function(name) {
@@ -356,7 +361,9 @@
         }
       };
 
-      var request = this.ajax('createView', data);
+      var request = this.ajax('createView', data).then(function(data) {
+        this.viewId = data.view.id;
+      }.bind(this));
     },
 
     getRecipients: function(listid){

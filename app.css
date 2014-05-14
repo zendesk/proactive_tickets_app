@@ -84,6 +84,16 @@ footer {
   -ms-word-break: break-all;
 }
 
+.done-icon {
+  width: 251px;
+  height: 241px;
+  background: url("http://localhost:4567/conf_rocket.png");
+  background-position: 16px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
 .confirmation {
   overflow: auto;
   font-size: 15px;
