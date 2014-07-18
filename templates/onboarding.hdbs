@@ -1,7 +1,7 @@
 
 <div class="onboarding_wrapper">
   <div class="center">
-    <p class="caps">{{t "intro.title"}}<p>
+    <p class="featureheader">{{t "intro.title"}}<p>
     <h1>{{t "intro.headline1"}}
     <br />{{t "intro.headline2"}}</h1>
     <p>{{t "intro.subhead1"}}<br />{{t "intro.subhead2"}}</p>
@@ -10,8 +10,8 @@
     <br /><br />
       <div id="toggle_header">
         <ul>
-          <li id="first"><a class="how_it_works selected">{{t "intro.tab1"}}</a></li>
-          <li id="second"><a class="still_questions">{{t "intro.tab2"}}</a></li
+          <li id="first"><a class="how_it_works toggle selected">{{t "intro.tab1"}}</a></li>
+          <li id="second"><a class="still_questions toggle">{{t "intro.tab2"}}</a></li
         </ul>
     </div><!--#toggle_header-->
   </div><!--.center-->
@@ -33,15 +33,15 @@
       <div id="three_points" class="center">
         <ul>
           <li>
-            <span class="bold">{{t "intro.icon1header"}}</span><br />
+            <span class="support_header">{{t "intro.icon1header"}}</span><br />
             <span>{{t "intro.icon1body"}}</span>
           </li>
           <li>
-            <span class="bold">{{t "intro.icon2header"}}</span><br />
+            <span class="support_header">{{t "intro.icon2header"}}</span><br />
             <span>{{t "intro.icon2body"}}</span>
           </li>
             <li>
-            <span class="bold">{{t "intro.icon3header"}}</span><br />
+            <span class="support_header">{{t "intro.icon3header"}}</span><br />
             <span>{{t "intro.icon3body"}}</span>
           </li>
         </ul>
@@ -49,19 +49,19 @@
     </div><!--#how_it_works-->
     <div id="still_questions" class="center">
       <div class="support_point">
-        <span class="bold">{{t "intro.question1"}}</span><br />
+        <span class="support_header">{{t "intro.question1"}}</span><br />
         <span>{{t "intro.answer1"}}</span>
       </div><!--.support_point-->
       <div class="support_point">
-        <span class="bold">{{t "intro.question2"}}</span><br />
+        <span class="support_header">{{t "intro.question2"}}</span><br />
         <span>{{t "intro.answer2"}}</span>
       </div><!--.support_point-->
       <div class="support_point">
-        <span class="bold">{{t "intro.question3"}}</span><br />
+        <span class="support_header">{{t "intro.question3"}}</span><br />
         <span>{{t "intro.answer3"}}</span>
       </div><!--.support_point-->
       <div class="support_point">
-        <span class="bold">{{t "intro.question4"}}</span><br />
+        <span class="support_header">{{t "intro.question4"}}</span><br />
         <span>{{t "intro.answer4"}}</span>
       </div><!--.support_point-->
     </div><!--#still_questions-->

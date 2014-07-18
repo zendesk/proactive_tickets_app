@@ -103,11 +103,26 @@ footer {
 .confirmation, .onboarding_wrapper {
   .btn-inverse {
     border: none;
-    background: #FFA909;
+    background: #fda028;
     text-shadow: none;
     width: 202px;
     height: 46px;
+    font-family: Lucida Sans;
+    color: rgba(255,255,255,0.8);
+    font-size: 15px;
   }
+
+  .btn-inverse:hover{
+    color: #ffffff;
+    background: #ffab1a;
+  }
+
+  .btn-inverse:active{
+    color: #ffffff;
+    background: #ce8200;
+  }
+
+
 }
 
 .confirmation {
@@ -139,7 +154,8 @@ footer {
 }
 
 #toggle_header {
-	margin: 20px 0;
+	margin-bottom: 60px;
+  margin-top: 32px;
 }
 
 #toggle_header ul li {
@@ -158,10 +174,20 @@ footer {
 #still_questions {
 	top: 0px;
 	margin-left: 8%;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333333;
 }
 
 .selected {
-	font-weight:bold;
+	font-weight:700;
+  padding-bottom: 2px;
+  text-decoration: underline;
+}
+ 
+.toggle {
+  font-size: 16px;
+  color: #333333;
 }
 
 .center {
@@ -169,11 +195,28 @@ footer {
 }
 
 .center h1 {
-	margin: 0 0 5px 0;
+	/* margin: 0 0 5px 0;*/
+  font-size: 50px;
+  line-height: 48px;
+  font-weight: normal;
+  color: #333333;
+  font-family: DIN Next LT Pro;
+  margin-bottom: 32px;
+  margin-top: 32px;
 }
 
 .caps {
 	text-transform: uppercase;
+}
+
+.featureheader {
+  text-transform: uppercase;
+  margin-top: 50px;
+  
+  font-size: 16px;
+  font-weight: regular;
+  color: #828282;
+  font-family: Lucida Sans;
 }
 
 #three_icons {
@@ -189,16 +232,26 @@ footer {
 	display: inline-block;
 	width: 200px;
 	padding: 0 4%;
-	font-size: 12px;
+	font-size: 13px;
+  line-height: 20px;
+  color: #333333;
+  font-family: Lucida Sans;
 }
 
 .bold {
 	font-weight: bold;
 }
 
+.support_header {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #333333;
+}
+
 #questions span {
 	padding: 0 4%;
-	font-size: 12px;	
+	font-size: 13px;	
 }
 
 .support_point {
@@ -207,6 +260,9 @@ footer {
 	text-align: justify;
 	float: left;
 	margin: 1% 7%;
+  line-height: 20px;
+  color: #333333;
+  font-family: Lucida Sans;
 }
 
 .category-list {
