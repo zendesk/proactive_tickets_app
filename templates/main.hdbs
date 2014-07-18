@@ -49,7 +49,7 @@
     </div>
     <div class="question-field">
       <label>{{t "form.tags"}}</label>
-      <input value="" type="text" name="tags" class="tags"/>
+      <input value="" type="text" name="tags" id="tags" class="tags"/>
     </div>
     {{#if hasPriority}}
       <div class="question-field">

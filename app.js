@@ -211,7 +211,7 @@
     },
 
     getTagsArray: function() {
-      var tags = this.getField('tags') + ' ' + this.getCampaignNameTag();
+      var tags = this.getCampaignNameTag() + ' ' + this.getField('tags');
       return _.compact(tags.split(' '));
     },
 
