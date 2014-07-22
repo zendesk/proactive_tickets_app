@@ -1,9 +1,8 @@
 {
   "name": "Proactive Tickets",
   "author": {
-    "name": "Cocktails and Donuts",
-    "email": "jchristiansen@zendesk.com",
-    "url": "https://www.zendesk.com"
+    "name": "Zendesk Labs",
+    "email": "zendesklabs@zendesk.com"
   },
   "defaultLocale": "en",
   "private": true,
