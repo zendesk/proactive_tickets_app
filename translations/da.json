@@ -1,13 +1,13 @@
 {
   "app": {
+    "name": {
+      "value": "Proactive Ticket App",
+      "title": "app name"
+    },
     "package": "app_name",
     "description": {
         "value": "Play the famous zen tunes in your help desk.",
         "title": "app description"
-    },
-    "name": {
-        "value": "Proactive Ticket App",
-        "title": "app name"
     }
   },
   "form": {
@@ -98,8 +98,8 @@
         "title": "Proactive ticket fields instructions"
     },
     "this_user_guide": {
-      "value":"check denne guide.",
-      "title":"this user guide."
+      "value": "check denne guide.",
+      "title": "this user guide."
     }
   },
   "intro": {
@@ -107,12 +107,28 @@
         "value": "Proaktive Tickets app",
         "title": "Title of app"
     },
+    "headline1": {
+        "value": "En bedre kundeoplevelse",
+        "title": "Headline to display under title"
+    },
+    "headline2": {
+        "value": "starter med proaktiv support",
+        "title": "Headline to display under title"
+    },
     "headline": {
         "value": "En bedre kundeoplevelse starter med proaktiv support",
         "title": "Headline to display under title"
     },
     "subhead": {
         "value": "Med den Proaktive Tickets app, kan du oprette Zendesk tickets på baggrund af dine kunder. Du kan nemt oprette opgaver og proaktivt kommunikere med dine kunder.",
+        "title": "Summary statement about proactive ticket app"
+    },
+    "subhead1": {
+        "value": "Med den Proaktive Tickets app, kan du oprette Zendesk tickets på baggrund af dine kunder.",
+        "title": "Summary statement about proactive ticket app"
+    },
+    "subhead2": {
+        "value": "Du kan nemt oprette opgaver og proaktivt kommunikere med dine kunder.",
         "title": "Summary statement about proactive ticket app"
     },
     "cta": {
@@ -160,7 +176,6 @@
         "title": "First FAQ answer"
     },
     "question2": {
-        "value": "Can I customize my proactive ticket workflow?",
         "value": "Kan jeg skræddersy mit proaktive ticket workflow?",
         "title": "Second FAQ question"
     },
