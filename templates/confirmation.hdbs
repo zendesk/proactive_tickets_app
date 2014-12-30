@@ -37,7 +37,9 @@
     </div>
     <div class="column">
       <div class="data">
-        <strong>{{t "confirmation.description"}}</strong> {{this.data.ticketData.comment.body}}
+        <div class="descriptionfield">
+          <strong>{{t "confirmation.description"}}</strong> {{this.data.ticketData.comment.body}}
+        </div>
       </div>
     </div>
   </div>

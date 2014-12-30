@@ -67,6 +67,10 @@ footer {
   margin-bottom: 5px;
 }
 
+.descriptionfield {
+  white-space: pre-wrap;
+}
+
 .data .token {
   position: relative;
   display: inline-block;

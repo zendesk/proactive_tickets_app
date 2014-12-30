@@ -277,6 +277,7 @@
         var recipient = this.recipients[number];
 
         this.submittedTickets += 1;
+
         var newData = {
           ticket: {
             subject: self.data.ticketData.subject,
