@@ -51,13 +51,6 @@
             this.$('.missing-fields-note').hide();
             this.setData();
             this.switchTo('loading');
-            /*this.getRecipients(listid).then(function(data) {
-              self.recipients = data.rows;
-              self.switchTo('confirmation', {
-                recipientCount: self.recipients.length,
-                data: this.data
-              });
-            });*/
             this.getRecipients(listid);
             this.disableNextButton(false);
           }
@@ -380,10 +373,6 @@
         this.viewId = data.view.id;
       }.bind(this));
     },
-
-    /*getRecipients: function(listid){
-      return this.ajax('customerListMemberships', listid);
-    },*/
 
     getRecipients: function(listid, nextPage){
       var self = this;
