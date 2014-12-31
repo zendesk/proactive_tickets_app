@@ -293,7 +293,8 @@
             status: self.data.ticketData.status,
             type: self.data.ticketData.type,
             group_id: self.data.ticketData.group_id,
-            assignee_id: self.data.ticketData.assignee_id
+            assignee_id: self.data.ticketData.assignee_id,
+            submitter_id: this.currentUser().id()
           }
         };
         self.ajax('createTicket', newData);
