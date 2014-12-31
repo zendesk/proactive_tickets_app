@@ -51,13 +51,7 @@
             this.$('.missing-fields-note').hide();
             this.setData();
             this.switchTo('loading');
-            this.getRecipients(listid).then(function(data) {
-              self.recipients = data.rows;
-              self.switchTo('confirmation', {
-                recipientCount: self.recipients.length,
-                data: this.data
-              });
-            });
+            this.getRecipients(listid);
             this.disableNextButton(false);
           }
           break;
@@ -142,12 +136,21 @@
         };
       },
 
-      customerListMemberships: function(id){
-        return{
-          url: '/api/v2/user_views/' + id + '/execute.json',
-          type: 'GET',
-          dataType: 'json'
-        };
+      customerListMemberships: function(id, nextPageURL){
+        if(nextPageURL){
+          return{
+            url: nextPageURL,
+            type: 'GET',
+            dataType: 'json'
+          };
+        }
+        else{
+          return{
+            url: '/api/v2/user_views/' + id + '/execute.json',
+            type: 'GET',
+            dataType: 'json'
+          };
+        }
       },
 
       createView: function(data) {
@@ -371,8 +374,24 @@
       }.bind(this));
     },
 
-    getRecipients: function(listid){
-      return this.ajax('customerListMemberships', listid);
+    getRecipients: function(listid, nextPage){
+      var self = this;
+
+      this.ajax('customerListMemberships', listid, nextPage).then(function(data){
+        self.recipients =  self.recipients.concat(data.rows);
+
+        if(data.next_page){
+          this.getRecipients(listid,data.next_page);
+        }
+        else{
+          self.switchTo('confirmation', {
+            recipientCount: self.recipients.length,
+            data: this.data
+          });
+        }
+
+      });
+
     },
 
     findActiveViews: function(allLists){
