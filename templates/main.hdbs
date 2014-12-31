@@ -4,13 +4,23 @@
       <h3>{{t "form.customer_list"}}*</h3>
       <p class="instructions">{{t "instructions.customer_list"}}</p>
     </div>
-    <div class="question-field">
-      <select name="customer-list" id="customer-list">
-        {{#each user_views}}
-          <option value="{{id}}">{{title}}</option>
-        {{/each}}
-      </select>
+    {{#if prevData}}
+      <div class="question-field">
+        <select name="customer-list" id="customer-list" value="{{prevList}}">
+          {{#each user_views}}
+            <option value="{{id}}">{{title}}</option>
+          {{/each}}
+        </select>
+      </div>
+    {{else}}
+      <div class="question-field">
+        <select name="customer-list" id="customer-list">
+          {{#each user_views}}
+            <option value="{{id}}">{{title}}</option>
+          {{/each}}
+        </select>
     </div>
+    {{/if}}
   </div>
   <div class="question">
     <div class="question-label">
@@ -19,9 +29,15 @@
       </h3>
       <p class="instructions">{{t "instructions.campaign_name"}}</p>
     </div>
+    {{#if prevData}}
+    <div class="question-field">
+      <input value="{{prevName}}" type="text" name="name" id="campaign-name" />
+    </div>
+    {{else}}
     <div class="question-field">
       <input value="{{campaignName}}" type="text" name="name" id="campaign-name" />
     </div>
+    {{/if}}
   </div>
   <div class="question ticket-fields">
     <div class="question-label">
@@ -30,10 +46,17 @@
       <p class="instructions">{{t "instructions.proactive_ticket_fields"}} <a href="https://support.zendesk.com/entries/62082233" target="_blank">{{t "instructions.this_user_guide"}}</a>
 </p>
     </div>
-    <div class="question-field">
-      <label>{{t "form.subject"}}</label>
-      <input value="{{t "form.defaultsubject"}}" type="text" name="subject" id="subject" />
-    </div>
+    {{#if prevData}}
+      <div class="question-field">
+          <label>{{t "form.subject"}}</label>
+          <input value="{{prevSubject}}" type="text" name="subject" id="subject" />
+        </div>
+    {{else}}
+      <div class="question-field">
+        <label>{{t "form.subject"}}</label>
+        <input value="{{t "form.defaultsubject"}}" type="text" name="subject" id="subject" />
+      </div>
+    {{/if}}
     <div class="question-field">
       <label>{{t "form.groupassignee"}}</label>
       <select class="assignee" name="assignee" id="assignee">
@@ -47,10 +70,17 @@
         {{/each}}
       </select>
     </div>
-    <div class="question-field">
-      <label>{{t "form.tags"}}</label>
-      <input value="" type="text" name="tags" id="tags" class="tags"/>
-    </div>
+    {{#if prevData}}
+      <div class="question-field">
+        <label>{{t "form.tags"}}</label>
+        <input value="{{prevTags}}" type="text" name="tags" id="tags" class="tags"/>
+      </div>
+    {{else}}
+      <div class="question-field">
+        <label>{{t "form.tags"}}</label>
+        <input value="" type="text" name="tags" id="tags" class="tags"/>
+      </div>
+    {{/if}}
     {{#if hasPriority}}
       <div class="question-field">
         <label>{{t "form.priority"}}</label>
@@ -67,10 +97,17 @@
       <label>{{t "form.status"}}</label>
       <div class="statuses"></div>
     </div>
-    <div class="question-field description-field">
-      <label>{{t "form.description"}}</label>
-      <textarea name="description" id="description" rows="12">{{t "form.defaultdescription1"}}&#13;&#10;&#13;{{t "form.defaultdescription2"}}</textarea>
-    </div>
+    {{#if prevData}}
+      <div class="question-field description-field">
+        <label>{{t "form.description"}}</label>
+        <textarea name="description" id="description" rows="12">{{prevDesc}}</textarea>
+      </div>
+    {{else}}
+      <div class="question-field description-field">
+        <label>{{t "form.description"}}</label>
+        <textarea name="description" id="description" rows="12">{{t "form.defaultdescription1"}}&#13;&#10;&#13;{{t "form.defaultdescription2"}}</textarea>
+      </div>
+    {{/if}}
     <div style="clear: both;"></div>
   </div>
 </div>

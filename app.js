@@ -12,6 +12,10 @@
     fields: {},
     data: {},
 
+    previousData: false,
+    originalTags: '',
+    selectedList: '',
+
     currentView: 0,
 
     events: {
@@ -61,6 +65,7 @@
     goToPrevious: function() {
       if (this.currentView === 0) { return; }
       this.currentView -= 1;
+      this.previousData = true;
       this.goToTemplate();
     },
 
@@ -75,6 +80,7 @@
     goToNext: function() {
       if (this.currentView === 2) { return; }
       this.currentView += 1;
+      this.previousData = false;
       this.goToTemplate();
     },
 
@@ -203,11 +209,22 @@
 
             var activeLists = this.findActiveViews(customerListData.user_views);
 
-            self.switchTo('main', {user_views:activeLists, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive});
-            self._renderSelect('status', statusOptions, this.$('.statuses'), { name: this.I18n.t('form.statusnew'), value: 'new' });
-            self._renderSelect('type', typeOptions, this.$('.types'));
-            self._renderSelect('priority', priorityOptions, this.$('.priorities'));
-            // self._renderComboSelect('assignee', memberships, this.$('.assignees'));
+            console.log("list id: " + this.selectedList);
+
+            if(self.previousData){
+              self.switchTo('main', {user_views:activeLists, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive, prevData:this.previousData, prevSubject:this.data.ticketData.subject, prevDesc:this.data.ticketData.comment.body, prevTags:this.originalTags, prevName:this.data.campaignName, prevList:this.selectedList});
+              self._renderSelect('status', statusOptions, this.$('.statuses'), { name: this.I18n.t('form.statusnew'), value: 'new' });
+              self._renderSelect('type', typeOptions, this.$('.types'), {value: this.data.ticketData.type});
+              self._renderSelect('priority', priorityOptions, this.$('.priorities'), {value: this.data.ticketData.priority});
+            }
+            else{
+              self.switchTo('main', {user_views:activeLists, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive, prevData:this.previousData});
+              self._renderSelect('status', statusOptions, this.$('.statuses'), { name: this.I18n.t('form.statusnew'), value: 'new' });
+              self._renderSelect('type', typeOptions, this.$('.types'));
+              self._renderSelect('priority', priorityOptions, this.$('.priorities'));
+            }
+
+             // self._renderComboSelect('assignee', memberships, this.$('.assignees'));
           });
         });
       });
@@ -215,6 +232,7 @@
 
     getTagsArray: function() {
       var tags = this.getCampaignNameTag() + ' ' + this.getField('tags');
+      this.originalTags = this.getField('tags');
       return _.compact(tags.split(' '));
     },
 
@@ -230,6 +248,8 @@
           type = this.getField('type'),
           priority = this.getField('priority'),
           description = this.getField('description');
+
+      this.selectedList = this.getField('customer-list');
 
       /* Determines if an assignee was selected or not, and assigns group and assignee to the correct IDs */
       var groupassignee = this.getField('assignee');
