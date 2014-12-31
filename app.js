@@ -177,6 +177,7 @@
       var statusOptions;
       var priorityActive;
       var typeActive;
+      var activeListIDs = [];
 
       this.ajax('customerLists').then(function(customerListData){
         this.ajax('listTicketFields').then(function(fieldsData){
@@ -209,19 +210,41 @@
 
             var activeLists = this.findActiveViews(customerListData.user_views);
 
-            console.log("list id: " + this.selectedList);
+            for(var j=0; j< activeLists.length; j++){
+              activeListIDs.push({name: activeLists[j].title, value: activeLists[j].id});
+            }
 
             if(self.previousData){
               self.switchTo('main', {user_views:activeLists, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive, prevData:this.previousData, prevSubject:this.data.ticketData.subject, prevDesc:this.data.ticketData.comment.body, prevTags:this.originalTags, prevName:this.data.campaignName, prevList:this.selectedList});
-              self._renderSelect('status', statusOptions, this.$('.statuses'), { name: this.I18n.t('form.statusnew'), value: 'new' });
-              self._renderSelect('type', typeOptions, this.$('.types'), {value: this.data.ticketData.type});
-              self._renderSelect('priority', priorityOptions, this.$('.priorities'), {value: this.data.ticketData.priority});
+              self._renderSelect('customer-list', activeListIDs, this.$('.user_views'), true, {value: this.selectedList});
             }
             else{
               self.switchTo('main', {user_views:activeLists, fields:fieldsData.ticket_fields, priorities:priorityOptions, types:typeOptions, statuses:statusOptions, groupAssignees:memberships, hasPriority:priorityActive, hasType:typeActive, prevData:this.previousData});
-              self._renderSelect('status', statusOptions, this.$('.statuses'), { name: this.I18n.t('form.statusnew'), value: 'new' });
-              self._renderSelect('type', typeOptions, this.$('.types'));
-              self._renderSelect('priority', priorityOptions, this.$('.priorities'));
+              self._renderSelect('customer-list', activeListIDs, this.$('.user_views'), true);
+            }
+
+            // Set up for Status
+            if((self.previousData && this.data.ticketData.status == "new") || !self.previousData){
+              self._renderSelect('status', statusOptions, this.$('.statuses'), true, { name: this.I18n.t('form.statusnew'), value: 'new' });
+            }
+            else{
+              self._renderSelect('status', statusOptions, this.$('.statuses'), true, { value: this.data.ticketData.status });
+            }
+            
+            // Set up for Ticket Type
+            if(self.previousData && this.data.ticketData.type != ''){
+              self._renderSelect('type', typeOptions, this.$('.types'), false, {value: this.data.ticketData.type});
+            }
+            else{
+              self._renderSelect('type', typeOptions, this.$('.types'), false);
+            }
+
+            // Set up for Priority
+            if(self.previousData && this.data.ticketData.priority != ''){
+              self._renderSelect('priority', priorityOptions, this.$('.priorities'), false, {value: this.data.ticketData.priority});
+            }
+            else{
+              self._renderSelect('priority', priorityOptions, this.$('.priorities'), false);
             }
 
              // self._renderComboSelect('assignee', memberships, this.$('.assignees'));
@@ -435,14 +458,18 @@
       this.$('.still_questions').addClass('selected');
     },
 
-    _renderSelect: function(name, options, $el, defaultValue) {
+    _renderSelect: function(name, options, $el, required, defaultValue) {
       if (!$el.length) {
         return;
       }
 
       if (defaultValue !== undefined) {
         options.unshift(defaultValue);
-      } else {
+      } 
+      else if(required){
+        // basically do nothing - leave it alone
+      }
+      else {
         options.unshift({name: '-', value: ''});
       }
 
@@ -475,7 +502,6 @@
         $el.find('select').zdComboSelectMenu('setValue', this.fields[name]);
       }
     }
-
 
   };
 
