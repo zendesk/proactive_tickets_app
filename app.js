@@ -232,7 +232,7 @@
             }
             
             // Set up for Ticket Type
-            if(self.previousData && this.data.ticketData.type != ''){
+            if(self.previousData && this.data.ticketData.type !== ''){
               self._renderSelect('type', typeOptions, this.$('.types'), false, {value: this.data.ticketData.type});
             }
             else{
@@ -240,7 +240,7 @@
             }
 
             // Set up for Priority
-            if(self.previousData && this.data.ticketData.priority != ''){
+            if(self.previousData && this.data.ticketData.priority !== ''){
               self._renderSelect('priority', priorityOptions, this.$('.priorities'), false, {value: this.data.ticketData.priority});
             }
             else{
