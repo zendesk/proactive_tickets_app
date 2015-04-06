@@ -66,6 +66,7 @@
       if (this.currentView === 0) { return; }
       this.currentView -= 1;
       this.previousData = true;
+      this.recipients.length = 0;
       this.goToTemplate();
     },
 
