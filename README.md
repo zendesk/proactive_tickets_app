@@ -10,15 +10,7 @@ https://support.zendesk.com/entries/62082233
 
 #### Contributors
 
-* Erin Boyle
-* Elyse Kanagaratnam
-* Jesper Christiansen
-* Kevin Vanscoder
-* Stephanie Zou
-
-
-
-Please submit bug reports to jchristiansen@zendesk.com. Pull requests are welcome.
+Please submit bug reports as issues on GitHub. Pull requests are welcome.
 
 ### Screenshot(s):
-[put your screenshots down here.]
+
