@@ -155,6 +155,7 @@
           return{
             url: '/api/v2/user_views/' + id + '/execute.json',
             type: 'GET',
+            data: { sampling: false },
             dataType: 'json'
           };
         }
