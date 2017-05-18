@@ -32,6 +32,10 @@
       <p class="instructions">{{t "instructions.proactive_ticket_fields"}} <a href="https://support.zendesk.com/entries/62082233" target="_blank">{{t "instructions.this_user_guide"}}</a>
 </p>
     </div>
+    <div class="question-field">
+      <label>{{t "form.is_public"}}</label>
+      <div class="is_public"></div>
+    </div>
     {{#if prevData}}
       <div class="question-field">
           <label>{{t "form.subject"}}</label>

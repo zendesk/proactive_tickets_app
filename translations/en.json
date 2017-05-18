@@ -23,6 +23,10 @@
         "value": "Create your proactive ticket",
         "title": "Proactive ticket fields"
     },
+    "is_public": {
+        "value": "Public",
+        "title": "Public label"
+    },
     "subject": {
         "value": "Subject",
         "title": "Subject label"
@@ -214,8 +218,12 @@
         "title": "Copy 1 for confirmation page"
     },
     "copy2": {
-        "value": "customers. They will receive an email notification with the below ticket details.",
+        "value": "customers.",
         "title": "Copy 2 for confirmation page"
+    },
+    "is_public": {
+      "value":"Public",
+      "title":"Public label"
     },
     "subject": {
       "value":"SUBJECT",

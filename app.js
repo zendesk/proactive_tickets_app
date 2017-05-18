@@ -249,6 +249,8 @@
               self._renderSelect('priority', priorityOptions, this.$('.priorities'), false);
             }
 
+            self._renderSelect('is_public', [ { name: 'Public reply', value: true }, { name: 'Internal note', value: false } ], this.$('.is_public'), true, { value: (this.data.ticketData ? this.data.ticketData.is_public : true) });
+
              // self._renderComboSelect('assignee', memberships, this.$('.assignees'));
           });
         });
@@ -267,7 +269,8 @@
     },
 
     setData: function() {
-      var subject = this.getField('subject'),
+      var is_public = this.getField('is_public') === 'true',
+          subject = this.getField('subject'),
           tags = this.getTagsArray(),
           status = this.getField('status'),
           type = this.getField('type'),
@@ -313,7 +316,8 @@
           type: type,
           priority: priority,
           group_id: group,
-          assignee_id: assignee
+          assignee_id: assignee,
+          is_public: is_public
         }
       };
     },
@@ -339,7 +343,8 @@
             type: self.data.ticketData.type,
             group_id: self.data.ticketData.group_id,
             assignee_id: self.data.ticketData.assignee_id,
-            submitter_id: this.currentUser().id()
+            submitter_id: this.currentUser().id(),
+            is_public: self.data.ticketData.is_public
           }
         };
         self.ajax('createTicket', newData);
