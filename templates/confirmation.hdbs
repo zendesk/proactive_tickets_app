@@ -10,14 +10,6 @@
   <div class="data-container">
     <div class="column">
       <div class="data">
-        <strong>{{t "confirmation.is_public"}}</strong>
-        {{#if this.data.ticketData.is_public}}
-          Public reply
-        {{else}}
-          Internal note
-        {{/if}}
-      </div>
-      <div class="data">
         <strong>{{t "confirmation.subject"}}</strong> {{this.data.ticketData.subject}}
       </div>
       <div class="data">
@@ -44,6 +36,14 @@
       </div>
     </div>
     <div class="column">
+      <div class="data">
+        <strong>{{t "confirmation.is_public"}}</strong>
+        {{#if this.data.ticketData.is_public}}
+          {{t "form.publicreply"}}
+        {{else}}
+          {{t "form.internalnote"}}
+        {{/if}}
+      </div>
       <div class="data">
         <div class="descriptionfield">
           <strong>{{t "confirmation.description"}}</strong> {{this.data.ticketData.comment.body}}

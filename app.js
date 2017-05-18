@@ -249,7 +249,7 @@
               self._renderSelect('priority', priorityOptions, this.$('.priorities'), false);
             }
 
-            self._renderSelect('is_public', [ { name: 'Public reply', value: true }, { name: 'Internal note', value: false } ], this.$('.is_public'), true, { value: (this.data.ticketData ? this.data.ticketData.is_public : true) });
+            self._renderSelect('is_public', [ { name: this.I18n.t("form.publicreply"), value: true }, { name: this.I18n.t("form.internalnote"), value: false } ], this.$('.is_public'), true, { value: (this.data.ticketData ? this.data.ticketData.is_public : true) });
 
              // self._renderComboSelect('assignee', memberships, this.$('.assignees'));
           });

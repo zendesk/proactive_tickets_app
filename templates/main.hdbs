@@ -32,10 +32,6 @@
       <p class="instructions">{{t "instructions.proactive_ticket_fields"}} <a href="https://support.zendesk.com/entries/62082233" target="_blank">{{t "instructions.this_user_guide"}}</a>
 </p>
     </div>
-    <div class="question-field">
-      <label>{{t "form.is_public"}}</label>
-      <div class="is_public"></div>
-    </div>
     {{#if prevData}}
       <div class="question-field">
           <label>{{t "form.subject"}}</label>
@@ -87,13 +83,17 @@
       <label>{{t "form.status"}}</label>
       <div class="statuses"></div>
     </div>
+      <div class="question-field">
+      <label>{{t "form.is_public"}}</label>
+      <div class="is_public"></div>
+    </div>
     {{#if prevData}}
-      <div class="question-field description-field">
+      <div class="question-field">
         <label>{{t "form.description"}}</label>
         <textarea name="description" id="description" rows="12">{{prevDesc}}</textarea>
       </div>
     {{else}}
-      <div class="question-field description-field">
+      <div class="question-field">
         <label>{{t "form.description"}}</label>
         <textarea name="description" id="description" rows="12">{{t "form.defaultdescription1"}}&#13;&#10;&#13;{{t "form.defaultdescription2"}}</textarea>
       </div>
