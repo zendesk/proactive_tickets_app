@@ -23,6 +23,10 @@
         "value": "Create your proactive ticket",
         "title": "Proactive ticket fields"
     },
+    "is_public": {
+        "value": "Visibility",
+        "title": "Public label"
+    },
     "subject": {
         "value": "Subject",
         "title": "Subject label"
@@ -82,6 +86,14 @@
     "defaultdescription2": {
         "value": "This ticket was created on your behalf.",
         "title": "Default description text part 2"
+    },
+    "internalnote": {
+        "value": "Internal note",
+        "title": "Private ticket"
+    },
+    "publicreply": {
+        "value": "Public reply",
+        "title": "Public ticket"
     }
 },
 "instructions": {
@@ -214,8 +226,12 @@
         "title": "Copy 1 for confirmation page"
     },
     "copy2": {
-        "value": "customers. They will receive an email notification with the below ticket details.",
+        "value": "customers.",
         "title": "Copy 2 for confirmation page"
+    },
+    "is_public": {
+      "value":"VISIBILITY",
+      "title":"Public label"
     },
     "subject": {
       "value":"SUBJECT",
