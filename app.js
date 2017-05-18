@@ -334,7 +334,8 @@
           ticket: {
             subject: self.data.ticketData.subject,
             comment: {
-              body: self.data.ticketData.comment.body
+              body: self.data.ticketData.comment.body,
+              public: self.data.ticketData.is_public
             },
             tags: self.data.ticketData.tags,
             requester_id: recipient.id,
@@ -343,8 +344,7 @@
             type: self.data.ticketData.type,
             group_id: self.data.ticketData.group_id,
             assignee_id: self.data.ticketData.assignee_id,
-            submitter_id: this.currentUser().id(),
-            is_public: self.data.ticketData.is_public
+            submitter_id: this.currentUser().id()
           }
         };
         self.ajax('createTicket', newData);
